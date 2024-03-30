@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1342530277766630461}
   - component: {fileID: 4640377655858874703}
   - component: {fileID: 1828857035345316826}
+  - component: {fileID: 3218945889826569462}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -163,3 +164,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   playerNumber: 1
+--- !u!114 &3218945889826569462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8632293756733120285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790a27942266abe449a5596b4cfa51c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 5203171719691610081, guid: de50df330a2c65d418c5502444a38310, type: 3}
+  wallPrefab: {fileID: 4322182885635882631, guid: 0a5e11550db7164429666baf670892e6, type: 3}
+  boxPrefab: {fileID: 6993983932485415187, guid: 575a96aa13cb3bd499941c1b0af87592, type: 3}
+  explosionLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  explosionPrefab: {fileID: 8275139342278380538, guid: 34389dbc327ec7d4b96988633c46cb12, type: 3}
+  groundPrefab: {fileID: 2363665083769223222, guid: 75f7697320c05cc4aa6a2aea0d87d91c, type: 3}
+  inputKey: 305
+  bombDropDelay: 3
+  bombAmount: 1
+  explosionRadius: 2
