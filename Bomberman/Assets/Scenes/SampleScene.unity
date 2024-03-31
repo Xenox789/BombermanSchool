@@ -424,6 +424,8 @@ MonoBehaviour:
   player2Prefab: {fileID: 8153010243954701243, guid: 5469d69f10c8b154db960e08ceaeb286, type: 3}
   width: 15
   height: 10
+  tileObjects: []
+  saveFileName: level1.bml
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
