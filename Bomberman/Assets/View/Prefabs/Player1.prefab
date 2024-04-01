@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5411267317300383532}
   - component: {fileID: 577637860308974932}
   - component: {fileID: 6839004927893738977}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 8836958117789556120}
   - component: {fileID: 7182375315322818384}
   - component: {fileID: 4822671800978088619}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 5985547904303084043}
   - component: {fileID: 1337382456448971884}
   - component: {fileID: 8160039771848850742}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 1828857035345316826}
   - component: {fileID: 3218945889826569462}
   - component: {fileID: 8831941948368356422}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -423,12 +423,17 @@ MonoBehaviour:
   boxPrefab: {fileID: 6993983932485415187, guid: 575a96aa13cb3bd499941c1b0af87592, type: 3}
   explosionLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 257
   explosionPrefab: {fileID: 8275139342278380538, guid: 34389dbc327ec7d4b96988633c46cb12, type: 3}
   groundPrefab: {fileID: 2363665083769223222, guid: 75f7697320c05cc4aa6a2aea0d87d91c, type: 3}
   inputKey: 305
   bombDropDelay: 3
   bombAmount: 1
+  bombsRemaining: 1
+  extras:
+  - {fileID: 5623331565126395140, guid: db1854e9437c91b4ebf3ee7957603c6e, type: 3}
+  - {fileID: 4387904694027012484, guid: 510527f429dd35a45a141ba6423cd084, type: 3}
+  - {fileID: 2894922568442380664, guid: aab77fe30ffbea14baac381a631a78b6, type: 3}
   explosionRadius: 2
 --- !u!58 &8831941948368356422
 CircleCollider2D:
@@ -476,7 +481,7 @@ GameObject:
   - component: {fileID: 8980985193105564571}
   - component: {fileID: 1962804332972941749}
   - component: {fileID: 6649617964492932391}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
