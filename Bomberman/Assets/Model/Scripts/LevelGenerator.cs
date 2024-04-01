@@ -54,23 +54,23 @@ public class LevelGenerator : MonoBehaviour
                     tileObject = Instantiate(player1Prefab, rightSpawnPosition, Quaternion.identity);
                     tileObjects.Add(tileObject);
                 }
-                // Falak a szélén
+                // Falak a szï¿½lï¿½n
                 else if (x == 0 || y == 0 || x == width - 1 || y == height - 1)
                 {
                     tileObject = Instantiate(wallPrefab, new Vector2(x, y), Quaternion.identity);
                     tileObjects.Add(tileObject);
                 }
-                // Falak minden második mez?n belül
+                // Falak minden mï¿½sodik mez?n belï¿½l
                 else if (x % 2 == 0 && y % 2 == 0)
                 {
                     tileObject = Instantiate(wallPrefab, new Vector2(x, y), Quaternion.identity);
                     tileObjects.Add(tileObject);
                 }
-                // Dobozok helyezése a falak közötti részeken
+                // Dobozok helyezï¿½se a falak kï¿½zï¿½tti rï¿½szeken
                 else
                 {
-                    // Doboz vagy üres mez? véletlenszer? elhelyezése
-                    if (Random.Range(0, 100) < 30) // 30% esély
+                    // Doboz vagy Ã¼res mez? vÃ©letlenszer? elhelyezÃ©se
+                    if (Random.Range(0, 100) < 30) // 30% esÃ©ly
                     {
                         tileObject = Instantiate(boxPrefab, new Vector2(x, y), Quaternion.identity);
                         tileObjects.Add(tileObject);

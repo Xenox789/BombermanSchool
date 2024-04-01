@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
+<<<<<<< HEAD
     public int playerNumber = 1;
 
     //public GameObject bombPrefab;
@@ -25,6 +26,19 @@ public class Player : MonoBehaviour
     public MovementSpriteRenderer spriteRendererRight;
     private MovementSpriteRenderer activeSpriteRenderer;
 
+=======
+
+    
+    private float normalSpeed;
+    public int playerNumber = 1;
+
+    
+    public GameObject groundPrefab;
+    private Vector2 movement;
+    private Rigidbody2D rb; 
+    private string horizontalAxis;
+    private string verticalAxis;
+>>>>>>> powerup
 
 
     void Start()
@@ -63,6 +77,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+<<<<<<< HEAD
         // Fizikai mozgas
         rb.MovePosition(rb.position + movementDirection * moveSpeed * Time.fixedDeltaTime);
     }
@@ -78,4 +93,37 @@ public class Player : MonoBehaviour
         activeSpriteRenderer = spriteRenderer;
         activeSpriteRenderer.idle = movementDirection == Vector2.zero;
     }
+=======
+        
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion")) {
+            Death();
+        }
+        
+        
+    }
+
+    
+
+    private void Death()
+    {
+        enabled = false;
+
+        GetComponent<Bomb>().enabled = false;
+        
+        gameObject.SetActive(false);
+        FindObjectOfType<GameManager>().CheckWin();
+      
+    }
+    public void IncreaseSpeed()
+    {
+        moveSpeed *= 1.5f;
+    }
+    
+
+>>>>>>> powerup
 }

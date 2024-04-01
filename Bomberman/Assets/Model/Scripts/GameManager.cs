@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
+
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public int totalRounds = 3; // Hány körig tart a játék
+    public int totalRounds = 3; 
     private int[] playerScores;
-
+    public GameObject[] players;
     private void Awake()
     {
         if (Instance == null)
@@ -24,14 +24,39 @@ public class GameManager : MonoBehaviour
     }
 
     void InitializeGame()
-    {
-        // Játékos pontszámok inicializálása
-        playerScores = new int[2]; // Ha a játékot kib?vítjük 3 játékosra, itt kell módosítani
+    {        
+        playerScores = new int[2]; 
+        playerScores[0] = 0;
+        playerScores[1] = 0;
     }
 
-    public void PlayerWins(int playerIndex)
+
+    public void CheckWin()
     {
-        playerScores[playerIndex]++;
+        
+        int alivePlayer = 0;
+        foreach (GameObject player in players)
+        {
+            if(player.activeSelf) alivePlayer++;
+        }
+        if (alivePlayer <= 1)
+        {
+            Invoke(nameof(NewRound), 1.5f);
+        }
+
+    }
+    public void NewRound()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void PlayerWins()
+    {
+
+        if(players[1].activeSelf && !players[0].activeSelf)
+            playerScores[0]++;
+        else if(players[0].activeSelf && !players[1].activeSelf)
+            playerScores[1]++;
+
         CheckGameEnd();
     }
 
@@ -39,25 +64,25 @@ public class GameManager : MonoBehaviour
     {
         foreach (int score in playerScores)
         {
-            if (score >= totalRounds)
+            if (score == totalRounds)
             {
-                // Játék vége, eredmények megjelenítése
+                
                 Debug.Log("Game Over. Player " + (score == playerScores[0] ? "1" : "2") + " wins!");
                 RestartGame();
                 return;
             }
         }
 
-        // Új kör indítása
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void RestartGame()
     {
-        // Játék újraindítása az alapértelmezett állapothoz
+        
         SceneManager.LoadScene("MainMenu");
-        Destroy(gameObject); // GameManager törlése, hogy újra inicializálódjon
+        Destroy(gameObject); 
     }
 
-    // Egyéb funkciók, mint pontszámok frissítése, játék pause és folytatása
+    
 }
