@@ -34,21 +34,21 @@ public class LevelGenerator : MonoBehaviour
                     Vector2 rightSpawnPosition = new Vector2(x, y);
                     Instantiate(player1Prefab, rightSpawnPosition, Quaternion.identity);
                 }
-                // Falak a szélén
+                // Falak a szï¿½lï¿½n
                 else if (x == 0 || y == 0 || x == width - 1 || y == height - 1)
                 {
                     Instantiate(wallPrefab, new Vector2(x, y), Quaternion.identity);
                 }
-                // Falak minden második mez?n belül
+                // Falak minden mï¿½sodik mez?n belï¿½l
                 else if (x % 2 == 0 && y % 2 == 0)
                 {
                     Instantiate(wallPrefab, new Vector2(x, y), Quaternion.identity);
                 }
-                // Dobozok helyezése a falak közötti részeken
+                // Dobozok helyezï¿½se a falak kï¿½zï¿½tti rï¿½szeken
                 else
                 {
-                    // Doboz vagy üres mez? véletlenszer? elhelyezése
-                    if (Random.Range(0, 2) == 0) // 50% esély
+                    // Doboz vagy ï¿½res mez? vï¿½letlenszer? elhelyezï¿½se
+                    if (Random.Range(0, 2) == 0) // 50% esï¿½ly
                     {
                         Instantiate(boxPrefab, new Vector2(x, y), Quaternion.identity);
                     }

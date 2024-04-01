@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4640377655858874703}
   - component: {fileID: 1828857035345316826}
   - component: {fileID: 3218945889826569462}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   playerNumber: 1
+  groundPrefab: {fileID: 2363665083769223222, guid: 75f7697320c05cc4aa6a2aea0d87d91c, type: 3}
 --- !u!114 &3218945889826569462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,4 +188,8 @@ MonoBehaviour:
   inputKey: 305
   bombDropDelay: 3
   bombAmount: 1
+  extras:
+  - {fileID: 5623331565126395140, guid: db1854e9437c91b4ebf3ee7957603c6e, type: 3}
+  - {fileID: 2894922568442380664, guid: aab77fe30ffbea14baac381a631a78b6, type: 3}
+  - {fileID: 4387904694027012484, guid: 510527f429dd35a45a141ba6423cd084, type: 3}
   explosionRadius: 2
