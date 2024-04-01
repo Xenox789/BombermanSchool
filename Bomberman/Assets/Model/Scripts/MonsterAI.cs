@@ -75,6 +75,12 @@ public class MonsterMovement : MonoBehaviour
         return hit.collider != null;
     }
 
-    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }
 
