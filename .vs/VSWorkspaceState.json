@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Bomberman",
+    "\\Bomberman\\Assets",
+    "\\Bomberman\\Assets\\Model",
+    "\\Bomberman\\Assets\\Model\\Scripts"
   ],
-  "SelectedNode": "\\C:\\Users\\patak\\OneDrive\\Dokumentumok\\Máté\\2024 tavasz\\szofttech\\Bomberman",
+  "SelectedNode": "\\Bomberman\\Assets\\Model\\Scripts\\Bomb.cs",
   "PreviewInSolutionExplorer": false
 }
