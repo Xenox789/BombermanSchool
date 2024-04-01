@@ -260,7 +260,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 4.4611893
+  orthographic size: 5.3820305
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -285,7 +285,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.69, y: 4.2, z: -10}
+  m_LocalPosition: {x: 6.93, y: 4.82, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -422,6 +422,7 @@ MonoBehaviour:
   grassPrefab: {fileID: 2363665083769223222, guid: 75f7697320c05cc4aa6a2aea0d87d91c, type: 3}
   player1Prefab: {fileID: 8632293756733120285, guid: 1733cbb0861a11f4eaf2ab22f1b02634, type: 3}
   player2Prefab: {fileID: 8153010243954701243, guid: 5469d69f10c8b154db960e08ceaeb286, type: 3}
+  monster1Prefab: {fileID: 6902604740643719872, guid: 7b5a0d10b274e294994f72e25124a334, type: 3}
   width: 15
   height: 10
 --- !u!1660057539 &9223372036854775807

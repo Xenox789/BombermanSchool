@@ -7,6 +7,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject grassPrefab;
     public GameObject player1Prefab;
     public GameObject player2Prefab;
+    public GameObject monster1Prefab;
 
     public int width = 15;
     public int height = 10;
@@ -29,6 +30,14 @@ public class LevelGenerator : MonoBehaviour
                     Vector2 leftSpawnPosition = new Vector2(x, y);
                     Instantiate(player2Prefab, leftSpawnPosition, Quaternion.identity);
                 }
+                else if(x == 1 && y == 1)
+                {
+                    Instantiate(monster1Prefab, new Vector3(x,y), Quaternion.identity);
+                }
+                else if (x == width - 2 && y == height-2)
+                {
+                    Instantiate(monster1Prefab, new Vector3(x, y), Quaternion.identity);
+                }
                 else if (x == width - 2 && y == height / 2)
                 {
                     Vector2 rightSpawnPosition = new Vector2(x, y);
@@ -48,7 +57,7 @@ public class LevelGenerator : MonoBehaviour
                 else
                 {
                     // Doboz vagy üres mez? véletlenszer? elhelyezése
-                    if (Random.Range(0, 2) == 0) // 50% esély
+                    if (Random.Range(0, 100) < 30) // 30% esély
                     {
                         Instantiate(boxPrefab, new Vector2(x, y), Quaternion.identity);
                     }

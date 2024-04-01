@@ -5,39 +5,77 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    private float normalSpeed;
     public int playerNumber = 1;
 
     //public GameObject bombPrefab;
 
-    private Vector2 movement;
-    private Rigidbody2D rb; 
-    private string horizontalAxis;
-    private string verticalAxis;
+    private Vector2 movementDirection;
+    private Rigidbody2D rb;
+
+
+    public KeyCode inputUp = KeyCode.W;
+    public KeyCode inputDown = KeyCode.S;
+    public KeyCode inputLeft = KeyCode.A;
+    public KeyCode inputRight = KeyCode.D;
+
+
+    public MovementSpriteRenderer spriteRendererUp;
+    public MovementSpriteRenderer spriteRendererDown;
+    public MovementSpriteRenderer spriteRendererLeft;
+    public MovementSpriteRenderer spriteRendererRight;
+    private MovementSpriteRenderer activeSpriteRenderer;
+
 
 
     void Start()
     {
-        normalSpeed = moveSpeed;
         rb = GetComponent<Rigidbody2D>();
-
-        horizontalAxis = "Player" + playerNumber + "Horizontal";
-        verticalAxis = "Player" + playerNumber + "Vertical";
+        activeSpriteRenderer = spriteRendererDown;
     }
 
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw(horizontalAxis);
-        movement.y = Input.GetAxisRaw(verticalAxis);
+        if (Input.GetKey(inputUp))
+        {
+            SetDirection(Vector2.up, spriteRendererUp);
+        } 
+        else if (Input.GetKey(inputDown))
+        {
+            SetDirection(Vector2.down, spriteRendererDown);
+        }
+        else if (Input.GetKey(inputLeft))
+        {
+            SetDirection(Vector2.left, spriteRendererLeft);
+        }
+        else if (Input.GetKey(inputRight))
+        {
+            SetDirection(Vector2.right, spriteRendererRight);
+        }
+        else
+        {
+            SetDirection(Vector2.zero, activeSpriteRenderer);
+        }
+            
 
 
     }
 
     void FixedUpdate()
     {
-        // Fizikai mozg?s
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        // Fizikai mozgas
+        rb.MovePosition(rb.position + movementDirection * moveSpeed * Time.fixedDeltaTime);
     }
 
+    private void SetDirection(Vector2 newDirection, MovementSpriteRenderer spriteRenderer)
+    {
+        movementDirection = newDirection;
+        spriteRendererUp.enabled = spriteRenderer == spriteRendererUp;
+        spriteRendererDown.enabled = spriteRenderer == spriteRendererDown;
+        spriteRendererLeft.enabled = spriteRenderer == spriteRendererLeft;
+        spriteRendererRight.enabled = spriteRenderer == spriteRendererRight;
+
+        activeSpriteRenderer = spriteRenderer;
+        activeSpriteRenderer.idle = movementDirection == Vector2.zero;
+    }
 }
