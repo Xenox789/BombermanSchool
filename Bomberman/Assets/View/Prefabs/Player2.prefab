@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e366c8d84f8f8e048a0321a247cb9cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2.5
   playerNumber: 2
   inputUp: 119
   inputDown: 115

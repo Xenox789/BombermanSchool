@@ -17,8 +17,8 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {
-        // GenerateLevel();
-        LoadLevel();
+         GenerateLevel();
+        //LoadLevel();
 
         // SaveLevel();
     }
