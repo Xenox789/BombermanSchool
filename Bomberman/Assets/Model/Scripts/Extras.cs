@@ -37,6 +37,7 @@ public class Extras : MonoBehaviour
     {
         if (other.CompareTag("Player")) {
             ExtraPickup(other.gameObject);
+            
         }
     }
     

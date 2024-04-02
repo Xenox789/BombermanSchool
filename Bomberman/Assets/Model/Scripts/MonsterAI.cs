@@ -71,16 +71,19 @@ public class MonsterMovement : MonoBehaviour
 
     bool IsFacingWall()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, GetComponent<BoxCollider2D>().size, 0f, movementDirection, 0.3f, LayerMask.GetMask("Box"));
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, GetComponent<BoxCollider2D>().size, 0f, movementDirection, 0.3f, LayerMask.GetMask("Box","Bomb"));
         return hit.collider != null;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Explosion"))
         {
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            
         }
     }
+
+    
 }
 

@@ -8,6 +8,7 @@ TagManager:
   - Box
   - Bomb
   - Monster
+  - Explosion
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - Explosion
   - Bomb
   - Box
-  - 
-  - 
+  - Monster
+  - Extra
   - 
   - 
   - 

@@ -402,6 +402,7 @@ MonoBehaviour:
   inputDown: 274
   inputLeft: 276
   inputRight: 275
+  isAlive: 1
   spriteRendererUp: {fileID: 8160039771848850742}
   spriteRendererDown: {fileID: 6839004927893738977}
   spriteRendererLeft: {fileID: 6649617964492932391}
@@ -423,7 +424,7 @@ MonoBehaviour:
   boxPrefab: {fileID: 6993983932485415187, guid: 575a96aa13cb3bd499941c1b0af87592, type: 3}
   explosionLayerMask:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 769
   explosionPrefab: {fileID: 8275139342278380538, guid: 34389dbc327ec7d4b96988633c46cb12, type: 3}
   groundPrefab: {fileID: 2363665083769223222, guid: 75f7697320c05cc4aa6a2aea0d87d91c, type: 3}
   inputKey: 305
