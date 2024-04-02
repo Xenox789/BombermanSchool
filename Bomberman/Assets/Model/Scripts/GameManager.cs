@@ -2,6 +2,8 @@ using Unity.Collections;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 
 public class GameManager : MonoBehaviour
@@ -10,7 +12,9 @@ public class GameManager : MonoBehaviour
 
     public int totalRounds = 3; 
     public int[] playerScores;
-    public GameObject[] players;   
+    public GameObject[] players;
+    public TextMeshProUGUI player1ScoreText;
+    public TextMeshProUGUI player2ScoreText;
 
     void Start()
     {        
@@ -41,6 +45,9 @@ public class GameManager : MonoBehaviour
             playerScores[1]++;
         else if(players[0].activeSelf && !players[1].activeSelf)
             playerScores[0]++;
+
+        player1ScoreText.text = ":" + playerScores[0];
+        player2ScoreText.text = ":" + playerScores[1];
 
         CheckGameEnd();
     }
