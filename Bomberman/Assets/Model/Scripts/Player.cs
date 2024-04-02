@@ -78,4 +78,31 @@ public class Player : MonoBehaviour
         activeSpriteRenderer = spriteRenderer;
         activeSpriteRenderer.idle = movementDirection == Vector2.zero;
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion")) {
+            Death();
+        }
+        
+        
+    }
+
+    
+
+    private void Death()
+    {
+        enabled = false;
+
+        GetComponent<Bomb>().enabled = false;
+        
+        gameObject.SetActive(false);
+        FindObjectOfType<GameManager>().CheckWin();
+      
+    }
+    public void IncreaseSpeed()
+    {
+        moveSpeed *= 1.5f;
+    }
+    
+
 }

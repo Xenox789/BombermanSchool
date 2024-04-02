@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
-     public GameObject bombPrefab;
+    public GameObject bombPrefab;
     public GameObject wallPrefab;
     public GameObject boxPrefab;
 
@@ -13,14 +13,28 @@ public class Bomb : MonoBehaviour
     public KeyCode inputKey;
     public float bombDropDelay = 3f;
     public int bombAmount = 1;
-    private int bombsRemaining = 1;
-    
+    public int bombsRemaining = 1;
+    public GameObject[] extras;
+   
+
+
 
     
     public int explosionRadius; 
 
+    public void IncreaseRadius()
+    {
+        explosionRadius++;
+    }
+    public void AddBomb()
+    {
+        bombsRemaining++;
+    }
 
-
+    private void OnEnable()
+    {
+        bombsRemaining = bombAmount;
+    }
     private void Update()
     {
         if (bombsRemaining > 0 && Input.GetKeyDown(inputKey)) {
@@ -41,12 +55,16 @@ public class Bomb : MonoBehaviour
         GameObject bomb = Instantiate(bombPrefab, position, Quaternion.identity);
         
         bombsRemaining--;
-        yield return new WaitForSeconds(bombDropDelay);
-
         position = bomb.transform.position;
         position.x = Mathf.Round(position.x);
         position.y = Mathf.Round(position.y);
 
+        
+        
+        yield return new WaitForSeconds(bombDropDelay);
+
+        
+        
 
         GameObject explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
        
@@ -63,6 +81,7 @@ public class Bomb : MonoBehaviour
         Destroy(bomb);
         
         bombsRemaining++;
+        
     }
 
    
@@ -83,11 +102,22 @@ public class Bomb : MonoBehaviour
 
             if (collider != null && collider.gameObject.CompareTag(boxPrefab.tag))
             {
+                
+
                 GameObject wallObject = collider.gameObject;
                 Destroy(wallObject);
-                Instantiate(groundPrefab, explosionPosition, Quaternion.identity);
+                Instantiate(groundPrefab, explosionPosition, Quaternion.identity);                
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
+                int random = Random.Range(0, extras.Length + 1);
+                if (random == 0) 
+                {
+                    Instantiate(extras[0], explosionPosition, Quaternion.identity);
+                }
+                else if(random == 1) {Instantiate(extras[1], explosionPosition, Quaternion.identity);}
+                else if(random == 2) {Instantiate(extras[2], explosionPosition, Quaternion.identity);}
+                else return;
+
             }
             return;
         }
@@ -102,5 +132,8 @@ public class Bomb : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Bomb")) {
             other.isTrigger = false;
         }
+
     }
+
+    
 }
