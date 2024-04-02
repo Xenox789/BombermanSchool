@@ -58,7 +58,16 @@ public class Bomb : MonoBehaviour
         position = bomb.transform.position;
         position.x = Mathf.Round(position.x);
         position.y = Mathf.Round(position.y);
+        
+        if (bomb.layer == LayerMask.NameToLayer("Explosion")) {
+            Explode(position, Vector2.up, explosionRadius);
+            Explode(position, Vector2.down, explosionRadius);
+            Explode(position, Vector2.right, explosionRadius);
+            Explode(position, Vector2.left, explosionRadius);
 
+            Destroy(bomb);
+            bombsRemaining++;
+        }
         
         
         yield return new WaitForSeconds(bombDropDelay);
@@ -70,22 +79,21 @@ public class Bomb : MonoBehaviour
        
         Destroy(explosion, 1f);
         
-        
-        Explode(position, Vector2.up,explosionRadius);
-        Explode(position, Vector2.down,explosionRadius);
-        Explode(position, Vector2.right,explosionRadius);
-        Explode(position, Vector2.left,explosionRadius);
-
-
-       
-        Destroy(bomb);
-        
+        ExplodeAll(position,explosionRadius,bomb);
+                
         bombsRemaining++;
         
     }
 
    
-   
+    public void ExplodeAll(Vector2 position, int explosionRadius, GameObject Bomb)
+    {
+        Explode(position, Vector2.up,explosionRadius);
+        Explode(position, Vector2.down,explosionRadius);
+        Explode(position, Vector2.right,explosionRadius);
+        Explode(position, Vector2.left,explosionRadius);
+        Destroy(Bomb);
+    }
     
     public void Explode(Vector2 position, Vector2 direction, int length)
     {
@@ -100,6 +108,13 @@ public class Bomb : MonoBehaviour
         {
             Collider2D collider = Physics2D.OverlapPoint(explosionPosition);
 
+            if (collider != null && collider.gameObject.CompareTag("Monster"))
+            {
+                GameObject monsterObject = collider.gameObject;
+                Destroy(monsterObject);            
+                GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
+                Destroy(expl, 1f);
+            }
             if (collider != null && collider.gameObject.CompareTag(boxPrefab.tag))
             {
                 
@@ -134,6 +149,7 @@ public class Bomb : MonoBehaviour
         }
 
     }
+    
 
     
 }

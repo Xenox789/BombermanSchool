@@ -11,20 +11,28 @@ public class LevelGenerator : MonoBehaviour
     public GameObject player1Prefab;
     public GameObject player2Prefab;
     public GameObject monster1Prefab;
-
     public int width = 15;
-    public int height = 10;
+    public int height = 11;
 
     void Start()
     {
+        
         GenerateLevel();
         //LoadLevel();
 
         // SaveLevel();
     }
 
-    void GenerateLevel()
+    public void GenerateLevel()
     {
+        GameObject[] allObjects = Object.FindObjectsOfType<GameObject>();
+
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.CompareTag("MainCamera") || obj.CompareTag("GameController"))
+                continue;
+            Destroy(obj);
+        }
         tileObjects = new List<GameObject>();
 
         for (int x = 0; x < width; x++)
@@ -34,11 +42,12 @@ public class LevelGenerator : MonoBehaviour
 
                 GameObject tileObject = Instantiate(grassPrefab, new Vector2(x, y), Quaternion.identity, transform);
                 tileObjects.Add(tileObject);
-                if (x == 1 && y == height / 2)
+                if (x == 1 && y == height - 2)
                 {
                     Vector2 leftSpawnPosition = new Vector2(x, y);
                     tileObject = Instantiate(player2Prefab, leftSpawnPosition, Quaternion.identity);
                     tileObjects.Add(tileObject);
+                    FindObjectOfType<GameManager>().players[1] = tileObject;
                 }
                 else if(x == 1 && y == 1)
                 {
@@ -48,11 +57,12 @@ public class LevelGenerator : MonoBehaviour
                 {
                     Instantiate(monster1Prefab, new Vector3(x, y), Quaternion.identity);
                 }
-                else if (x == width - 2 && y == height / 2)
+                else if (x == width - 2 && y == 1)
                 {
                     Vector2 rightSpawnPosition = new Vector2(x, y);
                     tileObject = Instantiate(player1Prefab, rightSpawnPosition, Quaternion.identity);
                     tileObjects.Add(tileObject);
+                    FindObjectOfType<GameManager>().players[0] = tileObject;
                 }
                 // Falak a sz�l�n
                 else if (x == 0 || y == 0 || x == width - 1 || y == height - 1)

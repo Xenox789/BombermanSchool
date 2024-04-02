@@ -11,14 +11,14 @@ public class Player : MonoBehaviour
 
     private Vector2 movementDirection;
     private Rigidbody2D rb;
-
+    private bool IsPowerUpEnable = true;
 
     public KeyCode inputUp = KeyCode.W;
     public KeyCode inputDown = KeyCode.S;
     public KeyCode inputLeft = KeyCode.A;
     public KeyCode inputRight = KeyCode.D;
 
-
+    public bool isAlive = true;
     public MovementSpriteRenderer spriteRendererUp;
     public MovementSpriteRenderer spriteRendererDown;
     public MovementSpriteRenderer spriteRendererLeft;
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Fizikai mozgas
+        
         rb.MovePosition(rb.position + movementDirection * moveSpeed * Time.fixedDeltaTime);
     }
 
@@ -78,30 +78,40 @@ public class Player : MonoBehaviour
         activeSpriteRenderer = spriteRenderer;
         activeSpriteRenderer.idle = movementDirection == Vector2.zero;
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion")) {
+        if (collision.gameObject.CompareTag("Explosion"))
+        {
             Death();
+            
         }
-        
-        
+        if (collision.gameObject.CompareTag("Monster"))
+        {
+            Death();
+            
+        }
     }
 
     
 
-    private void Death()
+    public void Death()
     {
-        enabled = false;
-
-        GetComponent<Bomb>().enabled = false;
-        
+        isAlive = false;
+        enabled = false;        
         gameObject.SetActive(false);
+        
         FindObjectOfType<GameManager>().CheckWin();
+        
       
     }
     public void IncreaseSpeed()
     {
-        moveSpeed *= 1.5f;
+        if(IsPowerUpEnable)
+        {
+            moveSpeed *= 1.5f;
+            IsPowerUpEnable = false;
+        }
     }
     
 
