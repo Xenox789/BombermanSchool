@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Bomberman",
-    "\\Bomberman\\Assets"
+    "\\Bomberman\\Assets",
+    "\\Bomberman\\Assets\\Model",
+    "\\Bomberman\\Assets\\Model\\Scripts"
   ],
-  "SelectedNode": "\\Bomberman\\Assets\\Resources",
   "PreviewInSolutionExplorer": false
 }
