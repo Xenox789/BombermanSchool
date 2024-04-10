@@ -9,6 +9,9 @@ public class Extras : MonoBehaviour
         ExtraBomb,
         SpeedIncrease,
         IncreaseRadius,
+
+        fakeBoxExtra,
+        ExtraInvioable,
     }
     
     public ItemType type;
@@ -27,6 +30,12 @@ public class Extras : MonoBehaviour
 
             case ItemType.SpeedIncrease:
                 player.GetComponent<Player>().IncreaseSpeed();
+                break;
+            case ItemType.fakeBoxExtra:
+                player.GetComponent<FakeBoxCrontroller>().PickUpFakeBox();
+                break;
+            case ItemType.ExtraInvioable:
+                player.GetComponent<Player>().Inviolable();
                 break;
         }
 

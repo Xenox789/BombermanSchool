@@ -331,6 +331,7 @@ GameObject:
   - component: {fileID: 1828857035345316826}
   - component: {fileID: 3218945889826569462}
   - component: {fileID: 8831941948368356422}
+  - component: {fileID: -5118768615276314974}
   m_Layer: 3
   m_Name: Player1
   m_TagString: Player
@@ -424,7 +425,7 @@ MonoBehaviour:
   boxPrefab: {fileID: 6993983932485415187, guid: 575a96aa13cb3bd499941c1b0af87592, type: 3}
   explosionLayerMask:
     serializedVersion: 2
-    m_Bits: 769
+    m_Bits: 2817
   explosionPrefab: {fileID: 8275139342278380538, guid: 34389dbc327ec7d4b96988633c46cb12, type: 3}
   groundPrefab: {fileID: 2363665083769223222, guid: 75f7697320c05cc4aa6a2aea0d87d91c, type: 3}
   inputKey: 305
@@ -435,6 +436,8 @@ MonoBehaviour:
   - {fileID: 5623331565126395140, guid: db1854e9437c91b4ebf3ee7957603c6e, type: 3}
   - {fileID: 4387904694027012484, guid: 510527f429dd35a45a141ba6423cd084, type: 3}
   - {fileID: 2894922568442380664, guid: aab77fe30ffbea14baac381a631a78b6, type: 3}
+  - {fileID: 670339305318175614, guid: 5e2964ee09116e14ab40b0886bd34a7c, type: 3}
+  - {fileID: 3653966071351958217, guid: 2abcbc42d3f7b9f4ea6e559c995e4cc0, type: 3}
   explosionRadius: 2
 --- !u!58 &8831941948368356422
 CircleCollider2D:
@@ -471,6 +474,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.27}
   serializedVersion: 2
   m_Radius: 0.48
+--- !u!114 &-5118768615276314974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8632293756733120285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df398a417f618c4880cf5c46b89e8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fakeBoxPrefab: {fileID: 5369293032104308904, guid: 4c316f5116367f147b907a38e7f9de38, type: 3}
+  inputKey: 279
+  remainingFakeBox: 0
 --- !u!1 &8726095663498584431
 GameObject:
   m_ObjectHideFlags: 0

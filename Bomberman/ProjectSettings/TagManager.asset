@@ -9,6 +9,8 @@ TagManager:
   - Bomb
   - Monster
   - Explosion
+  - fakeBox
+  - fakBox
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - Box
   - Monster
   - Extra
-  - 
+  - FakeBox
   - 
   - 
   - 
