@@ -21,11 +21,11 @@ public class Extras : MonoBehaviour
         switch (type)
         {
             case ItemType.ExtraBomb:
-                player.GetComponent<Bomb>().AddBomb();
+                player.GetComponent<BombController>().AddBomb();
                 break;
 
             case ItemType.IncreaseRadius:
-                player.GetComponent<Bomb>().IncreaseRadius();
+                player.GetComponent<BombController>().IncreaseRadius();
                 break;
 
             case ItemType.SpeedIncrease:
