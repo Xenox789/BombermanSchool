@@ -1,9 +1,10 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
-    public GameObject bombPrefab;
+
     public GameObject wallPrefab;
     public GameObject boxPrefab;
 
@@ -12,92 +13,59 @@ public class Bomb : MonoBehaviour
     public GameObject groundPrefab;
     public KeyCode inputKey;
     public float bombDropDelay = 3f;
-    public int bombAmount = 1;
-    public int bombsRemaining = 1;
+    private int bombsremaining;
+    private int explosionradius;
+    public bool IsAvailable { get; private set;}
     public GameObject[] extras;
-   
-
-
-
-    
-    public int explosionRadius; 
-
-    public void IncreaseRadius()
-    {
-        explosionRadius++;
-    }
-    public void AddBomb()
-    {
-        bombsRemaining++;
-    }
-
-    private void OnEnable()
-    {
-        bombsRemaining = bombAmount;
-    }
     private void Update()
     {
-        if (bombsRemaining > 0 && Input.GetKeyDown(inputKey)) {
-            StartCoroutine(PlaceBomb());
-        }
-        
+    
+        StartCoroutine(Ex());
 
     }
 
 
-    private IEnumerator PlaceBomb()
+    private IEnumerator Ex()
     {
+
+        IsAvailable = false;
         Vector2 position = transform.position;
         position.x = Mathf.Round(position.x);
         position.y = Mathf.Round(position.y);
-        
-        
-        GameObject bomb = Instantiate(bombPrefab, position, Quaternion.identity);
-        
-        bombsRemaining--;
-        position = bomb.transform.position;
-        position.x = Mathf.Round(position.x);
-        position.y = Mathf.Round(position.y);
-        
-        if (bomb.layer == LayerMask.NameToLayer("Explosion")) {
-            Explode(position, Vector2.up, explosionRadius);
-            Explode(position, Vector2.down, explosionRadius);
-            Explode(position, Vector2.right, explosionRadius);
-            Explode(position, Vector2.left, explosionRadius);
 
-            Destroy(bomb);
-            bombsRemaining++;
-        }
-        
-        
         yield return new WaitForSeconds(bombDropDelay);
 
-        
+        GameObject explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
+
+        Destroy(explosion, 1f);
+
+        ExplodeAll(position, explosionradius);
+        IsAvailable = true;
+        Destroy(gameObject);
         
 
-        GameObject explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
-       
-        Destroy(explosion, 1f);
-        
-        ExplodeAll(position,explosionRadius,bomb);
-                
-        bombsRemaining++;
-        
     }
 
-   
-    public void ExplodeAll(Vector2 position, int explosionRadius, GameObject Bomb)
+    public void SetExplosionradius(int length)
     {
-        Explode(position, Vector2.up,explosionRadius);
-        Explode(position, Vector2.down,explosionRadius);
-        Explode(position, Vector2.right,explosionRadius);
-        Explode(position, Vector2.left,explosionRadius);
-        Destroy(Bomb);
+        explosionradius = length;
     }
     
+    
+
+    public void ExplodeAll(Vector2 position, int explosionRadius)
+    {
+        Explode(position, Vector2.up, explosionRadius);
+        Explode(position, Vector2.down, explosionRadius);
+        Explode(position, Vector2.right, explosionRadius);
+        Explode(position, Vector2.left, explosionRadius);
+
+    }
+
     public void Explode(Vector2 position, Vector2 direction, int length)
     {
-        if (length <= 0) {
+        if (length <= 0)
+        {
             return;
         }
 
@@ -111,19 +79,31 @@ public class Bomb : MonoBehaviour
             if (collider != null && collider.gameObject.CompareTag("Monster"))
             {
                 GameObject monsterObject = collider.gameObject;
-                Destroy(monsterObject);            
+                Destroy(monsterObject);
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
             }
+<<<<<<< Updated upstream
+=======
+            if (collider != null && collider.gameObject.CompareTag("fakeBox"))
+            {
+                GameObject fakeBoxObject = collider.gameObject;
+                Destroy(fakeBoxObject);
+                GetComponent<FakeBoxCrontroller>().AddFakeBox();
+                GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
+                Destroy(expl, 1f);
+            }
+>>>>>>> Stashed changes
             if (collider != null && collider.gameObject.CompareTag(boxPrefab.tag))
             {
-                
+
 
                 GameObject wallObject = collider.gameObject;
                 Destroy(wallObject);
-                Instantiate(groundPrefab, explosionPosition, Quaternion.identity);                
+                Instantiate(groundPrefab, explosionPosition, Quaternion.identity);
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
+<<<<<<< Updated upstream
                 int random = Random.Range(0, extras.Length + 1);
                 if (random == 0) 
                 {
@@ -132,6 +112,12 @@ public class Bomb : MonoBehaviour
                 else if(random == 1) {Instantiate(extras[1], explosionPosition, Quaternion.identity);}
                 else if(random == 2) {Instantiate(extras[2], explosionPosition, Quaternion.identity);}
                 else return;
+=======
+                int random = Random.Range(0, extras.Length);
+                Instantiate(extras[random], explosionPosition, Quaternion.identity);
+
+
+>>>>>>> Stashed changes
 
             }
             return;
@@ -139,17 +125,29 @@ public class Bomb : MonoBehaviour
 
         GameObject explosion = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
         Destroy(explosion, 1f);
-        Explode(explosionPosition,direction,length-1);
+        Explode(explosionPosition, direction, length - 1);
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Bomb")) {
-            other.isTrigger = false;
+
+        if (collision.gameObject.CompareTag("Explosion"))
+        {
+            Vector2 position = transform.position;
+            position.x = Mathf.Round(position.x);
+            position.y = Mathf.Round(position.y);
+
+            GameObject explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
+
+            Destroy(explosion, 1f);
+
+            ExplodeAll(position, explosionradius);
+            
+            Destroy(gameObject);
+            IsAvailable = true;
         }
 
     }
-    
 
-    
+
 }
