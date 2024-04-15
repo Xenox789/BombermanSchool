@@ -37,11 +37,7 @@ public class FakeBoxCrontroller : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-<<<<<<< HEAD
-        if (other.gameObject.layer == LayerMask.NameToLayer("FakeBox")) {
-=======
         if (other.gameObject.layer == LayerMask.NameToLayer("Box")) {
->>>>>>> Bomb
             other.isTrigger = false;
         }
 

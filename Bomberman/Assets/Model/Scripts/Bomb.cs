@@ -108,17 +108,10 @@ public class Bomb : MonoBehaviour
                 Instantiate(groundPrefab, explosionPosition, Quaternion.identity);
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
-<<<<<<< HEAD
                 int random = Random.Range(0, extras.Length);                
-                    Instantiate(extras[random], explosionPosition, Quaternion.identity);
+                Instantiate(extras[random], explosionPosition, Quaternion.identity);
              
             
-=======
-                int random = Random.Range(0, extras.Length);
-                Instantiate(extras[random], explosionPosition, Quaternion.identity);
-
-
->>>>>>> Bomb
 
             }
             return;
