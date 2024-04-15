@@ -3,8 +3,8 @@
     "",
     "\\Bomberman",
     "\\Bomberman\\Assets",
-    "\\Bomberman\\Assets\\Model",
-    "\\Bomberman\\Assets\\Model\\Scripts"
+    "\\Bomberman\\Assets\\Model"
   ],
+  "SelectedNode": "\\Bomberman",
   "PreviewInSolutionExplorer": false
 }

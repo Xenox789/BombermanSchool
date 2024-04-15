@@ -24,22 +24,35 @@ public class Player : MonoBehaviour
     public MovementSpriteRenderer spriteRendererLeft;
     public MovementSpriteRenderer spriteRendererRight;
     private MovementSpriteRenderer activeSpriteRenderer;
-
+    private bool isInviolable;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         activeSpriteRenderer = spriteRendererDown;
+        isInviolable = false;
     }
 
+    public void SetInviolable()
+    {
+        isInviolable = false;
+    }
+    public void Inviolable()
+    {
+        if (!isInviolable)
+        {
+            isInviolable = true;
+            Invoke(nameof(SetInviolable),3f);
+        }
+    }
 
     void Update()
     {
         if (Input.GetKey(inputUp))
         {
             SetDirection(Vector2.up, spriteRendererUp);
-        } 
+        }
         else if (Input.GetKey(inputDown))
         {
             SetDirection(Vector2.down, spriteRendererDown);
@@ -56,14 +69,14 @@ public class Player : MonoBehaviour
         {
             SetDirection(Vector2.zero, activeSpriteRenderer);
         }
-            
+
 
 
     }
 
     void FixedUpdate()
     {
-        
+
         rb.MovePosition(rb.position + movementDirection * moveSpeed * Time.fixedDeltaTime);
     }
 
@@ -78,41 +91,44 @@ public class Player : MonoBehaviour
         activeSpriteRenderer = spriteRenderer;
         activeSpriteRenderer.idle = movementDirection == Vector2.zero;
     }
-    
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Explosion"))
+        if (!isInviolable)
         {
-            Death();
-            
-        }
-        if (collision.gameObject.CompareTag("Monster"))
-        {
-            Death();
-            
+            if (collision.gameObject.CompareTag("Explosion"))
+            {
+                Death();
+
+            }
+            if (collision.gameObject.CompareTag("Monster"))
+            {
+                Death();
+
+            }
         }
     }
 
-    
+
 
     public void Death()
     {
         isAlive = false;
-        enabled = false;        
+        enabled = false;
         gameObject.SetActive(false);
-        
+
         FindObjectOfType<GameManager>().CheckWin();
-        
-      
+
+
     }
     public void IncreaseSpeed()
     {
-        if(IsPowerUpEnable)
+        if (IsPowerUpEnable)
         {
             moveSpeed *= 1.5f;
             IsPowerUpEnable = false;
         }
     }
-    
+
 
 }
