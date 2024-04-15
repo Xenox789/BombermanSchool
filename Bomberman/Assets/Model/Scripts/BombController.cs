@@ -4,17 +4,12 @@ using UnityEngine;
 public class BombController : MonoBehaviour
 {
     public Bomb bombPrefab;
-    public GameObject wallPrefab;
-    public GameObject boxPrefab;
-
-    public LayerMask explosionLayerMask;
-    public GameObject explosionPrefab;
-    public GameObject groundPrefab;
+    
     public KeyCode inputKey;
-    public float bombDropDelay = 3f;
-    public int bombAmount = 0;
+ 
+    public int bombAmount = 1;
     public int bombsRemaining = 1;
-    public GameObject[] extras;
+    
    
 
 

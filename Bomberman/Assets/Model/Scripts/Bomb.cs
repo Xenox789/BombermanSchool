@@ -83,8 +83,6 @@ public class Bomb : MonoBehaviour
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
             }
-<<<<<<< Updated upstream
-=======
             if (collider != null && collider.gameObject.CompareTag("fakeBox"))
             {
                 GameObject fakeBoxObject = collider.gameObject;
@@ -93,7 +91,6 @@ public class Bomb : MonoBehaviour
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
             }
->>>>>>> Stashed changes
             if (collider != null && collider.gameObject.CompareTag(boxPrefab.tag))
             {
 
@@ -103,21 +100,10 @@ public class Bomb : MonoBehaviour
                 Instantiate(groundPrefab, explosionPosition, Quaternion.identity);
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
-<<<<<<< Updated upstream
-                int random = Random.Range(0, extras.Length + 1);
-                if (random == 0) 
-                {
-                    Instantiate(extras[0], explosionPosition, Quaternion.identity);
-                }
-                else if(random == 1) {Instantiate(extras[1], explosionPosition, Quaternion.identity);}
-                else if(random == 2) {Instantiate(extras[2], explosionPosition, Quaternion.identity);}
-                else return;
-=======
                 int random = Random.Range(0, extras.Length);
                 Instantiate(extras[random], explosionPosition, Quaternion.identity);
 
 
->>>>>>> Stashed changes
 
             }
             return;
