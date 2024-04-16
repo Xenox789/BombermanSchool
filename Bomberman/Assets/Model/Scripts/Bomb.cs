@@ -32,7 +32,9 @@ public class Bomb : MonoBehaviour
         Vector2 position = transform.position;
         position.x = Mathf.Round(position.x);
         position.y = Mathf.Round(position.y);
-
+        
+        
+        
         yield return new WaitForSeconds(bombDropDelay);
 
         GameObject explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
@@ -83,14 +85,6 @@ public class Bomb : MonoBehaviour
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
             }
-            if (collider != null && collider.gameObject.CompareTag("fakeBox"))
-            {
-                GameObject fakeBoxObject = collider.gameObject;
-                Destroy(fakeBoxObject);
-                GetComponent<FakeBoxCrontroller>().AddFakeBox();
-                GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
-                Destroy(expl, 1f);
-            }
             if(collider != null && collider.gameObject.CompareTag("fakeBox"))
             {
                 GameObject fakeBoxObject = collider.gameObject;
@@ -108,10 +102,10 @@ public class Bomb : MonoBehaviour
                 Instantiate(groundPrefab, explosionPosition, Quaternion.identity);
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
-                int random = Random.Range(0, extras.Length);                
+                int random = Random.Range(0, extras.Length);
                 Instantiate(extras[random], explosionPosition, Quaternion.identity);
-             
-            
+
+
 
             }
             return;
