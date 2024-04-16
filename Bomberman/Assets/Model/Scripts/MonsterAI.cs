@@ -14,6 +14,7 @@ public class MonsterMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ChooseRandomDirection();
     }
+   
 
     void Update()
     {
@@ -71,7 +72,7 @@ public class MonsterMovement : MonoBehaviour
 
     bool IsFacingWall()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, GetComponent<BoxCollider2D>().size, 0f, movementDirection, 0.3f, LayerMask.GetMask("Box","Bomb"));
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, GetComponent<BoxCollider2D>().size, 0f, movementDirection, 0.2f, LayerMask.GetMask("Box","Bomb"));
         return hit.collider != null;
     }
 
