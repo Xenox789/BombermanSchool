@@ -13,14 +13,15 @@ public class Bomb : MonoBehaviour
     public GameObject groundPrefab;
     public KeyCode inputKey;
     public float bombDropDelay = 3f;
-    private int bombsremaining;
     private int explosionradius;
     public bool IsAvailable { get; private set;}
+    private bool IsDetonatable = false;
+    private bool IsStartExplode = false;
     public GameObject[] extras;
     private void Update()
     {
-    
-        StartCoroutine(Ex());
+        if(IsDetonatable) StartCoroutine(DetonatorExplode());
+        else StartCoroutine(Ex());
 
     }
 
@@ -47,13 +48,40 @@ public class Bomb : MonoBehaviour
         
 
     }
+    private IEnumerator DetonatorExplode()
+    {
+
+        IsAvailable = false;
+        yield return new WaitUntil(() => IsStartExplode);
+        Vector2 position = transform.position;
+        position.x = Mathf.Round(position.x);
+        position.y = Mathf.Round(position.y);
+
+        GameObject explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
+
+        Destroy(explosion, 1f);
+
+        ExplodeAll(position, explosionradius);
+        IsAvailable = true;
+        Destroy(gameObject);
+        
+
+    }
 
     public void SetExplosionradius(int length)
     {
         explosionradius = length;
     }
     
+    public void SetDetonatable(bool _IsDetonatable)
+    {
+        IsDetonatable = _IsDetonatable;
+    }
     
+    public void SetStartExplode(bool _IsStartExplode)
+    {
+        IsStartExplode = _IsStartExplode;
+    }
 
     public void ExplodeAll(Vector2 position, int explosionRadius)
     {
