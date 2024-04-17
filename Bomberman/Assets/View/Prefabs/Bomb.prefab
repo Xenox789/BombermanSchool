@@ -170,11 +170,10 @@ MonoBehaviour:
   groundPrefab: {fileID: 2363665083769223222, guid: 75f7697320c05cc4aa6a2aea0d87d91c, type: 3}
   inputKey: 0
   bombDropDelay: 3
-  bombAmount: 1
-  bombsRemaining: 1
   extras:
   - {fileID: 5623331565126395140, guid: db1854e9437c91b4ebf3ee7957603c6e, type: 3}
-  - {fileID: 3653966071351958217, guid: 2abcbc42d3f7b9f4ea6e559c995e4cc0, type: 3}
+  - {fileID: 506007962793218916, guid: 2abcbc42d3f7b9f4ea6e559c995e4cc0, type: 3}
   - {fileID: 4387904694027012484, guid: 510527f429dd35a45a141ba6423cd084, type: 3}
   - {fileID: 2894922568442380664, guid: aab77fe30ffbea14baac381a631a78b6, type: 3}
   - {fileID: 670339305318175614, guid: 5e2964ee09116e14ab40b0886bd34a7c, type: 3}
+  - {fileID: 3941906565301449163, guid: f7485f5fb09d7e941a61ee3269a08963, type: 3}

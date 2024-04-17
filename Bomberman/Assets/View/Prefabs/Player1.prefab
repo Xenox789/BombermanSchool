@@ -421,23 +421,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombPrefab: {fileID: 5469569306132612107, guid: de50df330a2c65d418c5502444a38310, type: 3}
-  wallPrefab: {fileID: 4322182885635882631, guid: 0a5e11550db7164429666baf670892e6, type: 3}
-  boxPrefab: {fileID: 6993983932485415187, guid: 575a96aa13cb3bd499941c1b0af87592, type: 3}
-  explosionLayerMask:
-    serializedVersion: 2
-    m_Bits: 2817
-  explosionPrefab: {fileID: 8275139342278380538, guid: 34389dbc327ec7d4b96988633c46cb12, type: 3}
-  groundPrefab: {fileID: 2363665083769223222, guid: 75f7697320c05cc4aa6a2aea0d87d91c, type: 3}
   inputKey: 305
-  bombDropDelay: 3
   bombAmount: 1
   bombsRemaining: 1
-  extras:
-  - {fileID: 5623331565126395140, guid: db1854e9437c91b4ebf3ee7957603c6e, type: 3}
-  - {fileID: 4387904694027012484, guid: 510527f429dd35a45a141ba6423cd084, type: 3}
-  - {fileID: 2894922568442380664, guid: aab77fe30ffbea14baac381a631a78b6, type: 3}
-  - {fileID: 670339305318175614, guid: 5e2964ee09116e14ab40b0886bd34a7c, type: 3}
-  - {fileID: 3653966071351958217, guid: 2abcbc42d3f7b9f4ea6e559c995e4cc0, type: 3}
+  IsDetonatable: 0
   explosionRadius: 2
 --- !u!58 &8831941948368356422
 CircleCollider2D:

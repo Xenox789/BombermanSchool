@@ -13,14 +13,15 @@ public class Bomb : MonoBehaviour
     public GameObject groundPrefab;
     public KeyCode inputKey;
     public float bombDropDelay = 3f;
-    private int bombsremaining;
     private int explosionradius;
     public bool IsAvailable { get; private set;}
+    private bool IsDetonatable = false;
+    private bool IsStartExplode = false;
     public GameObject[] extras;
     private void Update()
     {
-    
-        StartCoroutine(Ex());
+        if(IsDetonatable) StartCoroutine(DetonatorExplode());
+        else StartCoroutine(Ex());
 
     }
 
@@ -32,8 +33,29 @@ public class Bomb : MonoBehaviour
         Vector2 position = transform.position;
         position.x = Mathf.Round(position.x);
         position.y = Mathf.Round(position.y);
-
+        
+        
+        
         yield return new WaitForSeconds(bombDropDelay);
+
+        GameObject explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
+
+        Destroy(explosion, 1f);
+
+        ExplodeAll(position, explosionradius);
+        IsAvailable = true;
+        Destroy(gameObject);
+        
+
+    }
+    private IEnumerator DetonatorExplode()
+    {
+
+        IsAvailable = false;
+        yield return new WaitUntil(() => IsStartExplode);
+        Vector2 position = transform.position;
+        position.x = Mathf.Round(position.x);
+        position.y = Mathf.Round(position.y);
 
         GameObject explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
 
@@ -51,7 +73,15 @@ public class Bomb : MonoBehaviour
         explosionradius = length;
     }
     
+    public void SetDetonatable(bool _IsDetonatable)
+    {
+        IsDetonatable = _IsDetonatable;
+    }
     
+    public void SetStartExplode(bool _IsStartExplode)
+    {
+        IsStartExplode = _IsStartExplode;
+    }
 
     public void ExplodeAll(Vector2 position, int explosionRadius)
     {
@@ -83,14 +113,6 @@ public class Bomb : MonoBehaviour
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
             }
-            if (collider != null && collider.gameObject.CompareTag("fakeBox"))
-            {
-                GameObject fakeBoxObject = collider.gameObject;
-                Destroy(fakeBoxObject);
-                GetComponent<FakeBoxCrontroller>().AddFakeBox();
-                GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
-                Destroy(expl, 1f);
-            }
             if(collider != null && collider.gameObject.CompareTag("fakeBox"))
             {
                 GameObject fakeBoxObject = collider.gameObject;
@@ -108,10 +130,10 @@ public class Bomb : MonoBehaviour
                 Instantiate(groundPrefab, explosionPosition, Quaternion.identity);
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
-                int random = Random.Range(0, extras.Length);                
+                int random = Random.Range(0, extras.Length);
                 Instantiate(extras[random], explosionPosition, Quaternion.identity);
-             
-            
+
+
 
             }
             return;
