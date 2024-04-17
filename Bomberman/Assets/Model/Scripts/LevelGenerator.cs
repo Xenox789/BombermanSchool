@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Globalization;
+using UnityEditor;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -19,9 +20,9 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {
-        
-        GenerateLevel();
-        //LoadLevel();
+        // DontDestroyOnLoad(gameObject);
+        // GenerateLevel();
+        LoadLevel();
 
         // SaveLevel();
     }
@@ -101,9 +102,6 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-
-    // Dani
-
     // List to store the gameobjects (prefabs)
     [SerializeField] private List<GameObject> tileObjects;
 
@@ -111,13 +109,12 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private string saveFileName = "level1.bml";
     [SerializeField] private string loadFileName = "level2.bml";
 
-    void SaveLevel()
+    public void SaveLevel()
     {
         string saveFilePath = Application.streamingAssetsPath + "/Levels/" + saveFileName;
 
         Directory.CreateDirectory(Application.streamingAssetsPath + "/Levels/");
 
-        // return if the file exists
         if (File.Exists(saveFilePath))
             return;
 
@@ -132,7 +129,7 @@ public class LevelGenerator : MonoBehaviour
         File.WriteAllLines(saveFilePath, saveData);
     }
 
-    void LoadLevel()
+    public void LoadLevel()
     {
         string loadFilePath = Application.streamingAssetsPath + "/Levels/" + loadFileName;
 
@@ -146,7 +143,6 @@ public class LevelGenerator : MonoBehaviour
 
             GameObject tileObject;
 
-            // switch on the gameObject type
             switch (line[0])
             {
                 case "Box(Clone)":
@@ -157,6 +153,7 @@ public class LevelGenerator : MonoBehaviour
                     break;
                 case "Player1(Clone)":
                     tileObject = Instantiate(player1Prefab, StringToVector3(line[1]), Quaternion.identity);
+                    // Player.Create1(StringToVector3(line[1]));
                     break;
                 case "Player2(Clone)":
                     tileObject = Instantiate(player2Prefab, StringToVector3(line[1]), Quaternion.identity);

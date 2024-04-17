@@ -228,4 +228,8 @@ public bool isOnWallOrBox;
         }
     }
 
+    public static void Create2(Vector3 position)
+    {
+        Instantiate(player2Prefab, position, Quaternion.identity);
+    }
 }
