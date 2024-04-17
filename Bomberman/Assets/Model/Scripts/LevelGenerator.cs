@@ -6,11 +6,14 @@ using System.Globalization;
 public class LevelGenerator : MonoBehaviour
 {
     public GameObject wallPrefab;
+    public GameObject outerWallPrefab;
     public GameObject boxPrefab;
     public GameObject grassPrefab;
     public GameObject player1Prefab;
     public GameObject player2Prefab;
     public GameObject monster1Prefab;
+    public GameObject flyingMonsterPrefab;
+
     public int width = 15;
     public int height = 11;
 
@@ -57,6 +60,14 @@ public class LevelGenerator : MonoBehaviour
                 {
                     Instantiate(monster1Prefab, new Vector3(x, y), Quaternion.identity);
                 }
+                else if (x == width /2 && y == height - 2)
+                {
+                    Instantiate(flyingMonsterPrefab, new Vector3(x, y), Quaternion.identity);
+                }
+                else if (x == width / 2 && y == 1)
+                {
+                    Instantiate(flyingMonsterPrefab, new Vector3(x, y), Quaternion.identity);
+                }
                 else if (x == width - 2 && y == 1)
                 {
                     Vector2 rightSpawnPosition = new Vector2(x, y);
@@ -67,7 +78,7 @@ public class LevelGenerator : MonoBehaviour
                 // Falak a sz�l�n
                 else if (x == 0 || y == 0 || x == width - 1 || y == height - 1)
                 {
-                    tileObject = Instantiate(wallPrefab, new Vector2(x, y), Quaternion.identity);
+                    tileObject = Instantiate(outerWallPrefab, new Vector2(x, y), Quaternion.identity);
                     tileObjects.Add(tileObject);
                 }
                 // Falak minden m�sodik mez?n bel�l

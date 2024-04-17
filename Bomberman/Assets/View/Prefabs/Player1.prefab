@@ -474,8 +474,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fakeBoxPrefab: {fileID: 5369293032104308904, guid: 4c316f5116367f147b907a38e7f9de38, type: 3}
-  inputKey: 279
-  remainingFakeBox: 0
+  inputKey: 303
+  remainingFakeBox: 3
 --- !u!1 &8726095663498584431
 GameObject:
   m_ObjectHideFlags: 0

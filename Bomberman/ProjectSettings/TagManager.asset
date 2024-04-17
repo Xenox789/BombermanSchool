@@ -21,11 +21,11 @@ TagManager:
   - Explosion
   - Bomb
   - Box
+  - OuterWall
   - Monster
   - Extra
   - FakeBox
-  - 
-  - 
+  - FlyingMonster
   - 
   - 
   - 
