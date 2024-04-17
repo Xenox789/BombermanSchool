@@ -18,6 +18,7 @@ public class Bomb : MonoBehaviour
     private bool IsDetonatable = false;
     private bool IsStartExplode = false;
     public GameObject[] extras;
+    public GameObject FakeExtra;
     private void Update()
     {
         if(IsDetonatable) StartCoroutine(DetonatorExplode());
@@ -130,9 +131,14 @@ public class Bomb : MonoBehaviour
                 Instantiate(groundPrefab, explosionPosition, Quaternion.identity);
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
-                int random = Random.Range(0, extras.Length);
-                Instantiate(extras[random], explosionPosition, Quaternion.identity);
-
+                  
+                int random = Random.Range(0, extras.Length + 1 );
+                if(random == extras.Length)
+                {
+                    Instantiate(FakeExtra, explosionPosition, Quaternion.identity);
+                }
+                else Instantiate(extras[random], explosionPosition, Quaternion.identity);
+                
 
 
             }
