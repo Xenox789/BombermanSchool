@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     private MovementSpriteRenderer activeSpriteRenderer;
     private bool isInviolable;
 
-    private bool canFly = false; 
+   
     private bool isFlying = false;
 public bool isOnWallOrBox;
     void Start()
@@ -194,9 +194,22 @@ public bool isOnWallOrBox;
         }
     }
 
+    public void ActivateDecreaseSpeed()
+    {
+        float _movespeed = moveSpeed;
+        moveSpeed = moveSpeed/2f;
+        StartCoroutine(DeactivateDecreaseSpeed(_movespeed,10f));
+    }
+
+    private IEnumerator DeactivateDecreaseSpeed(float _movespeed, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        moveSpeed = _movespeed;
+    }
+
     public void ActivateFlyingPowerUp()
     {
-        canFly = true;
+        
         isFlying = true;
         GetComponent<Collider2D>().isTrigger = true;
         StartCoroutine(DeactivateFlyingPowerUpAfterDelay(10f));
@@ -206,7 +219,7 @@ public bool isOnWallOrBox;
     private IEnumerator DeactivateFlyingPowerUpAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        canFly = false;
+        
         isFlying = false;
         GetComponent<Collider2D>().isTrigger = false;
         if(isOnWallOrBox)
