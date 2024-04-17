@@ -70,7 +70,15 @@ public class BombController : MonoBehaviour
         Vector2 position = transform.position;
         position.x = Mathf.Round(position.x);
         position.y = Mathf.Round(position.y);
-        
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 0.1f);
+        foreach (var collider in colliders)
+        {
+            if (collider.CompareTag("Wall") || collider.CompareTag("Box") || collider.CompareTag("fakeBox"))
+            {
+                bombsRemaining++; 
+                yield break;
+            }
+        }
         
         Bomb bomb = Instantiate(bombPrefab, position, Quaternion.identity);
         bomb.SetExplosionradius(explosionRadius);
@@ -96,10 +104,19 @@ public class BombController : MonoBehaviour
 
         bombsRemaining--;
 
+
         Vector2 position = transform.position;
         position.x = Mathf.Round(position.x);
         position.y = Mathf.Round(position.y);
-        
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 0.1f);
+        foreach (var collider in colliders)
+        {
+            if (collider.CompareTag("Wall") || collider.CompareTag("Box"))
+            {
+                bombsRemaining++;
+                yield break;
+            }
+        }
         
         Bomb bomb = Instantiate(bombPrefab, position, Quaternion.identity);
         bomb.SetExplosionradius(explosionRadius);
