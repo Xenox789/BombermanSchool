@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1e3287081702f94a9a1b364ff5be6b7
+guid: e8542ba8c96ba834ca45b59c4f313d1c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Monster_1_0
+      name: flying_dragon-red-RGB_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 123
-        width: 32
-        height: 41
+        y: 483
+        width: 191
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f8e07920b834924da364cd3dc1a1db0
-      internalID: 59918291
+      spriteID: 83e8047f9f81446409689d06477b99bd
+      internalID: -392653459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_1
+      name: flying_dragon-red-RGB_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 123
-        width: 32
-        height: 41
+        x: 191
+        y: 483
+        width: 191
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cd4550326966174ca4e7df505a82692
-      internalID: -946330426
+      spriteID: 53035850dac628d4a80f55bf47a4d73e
+      internalID: -1932614822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_2
+      name: flying_dragon-red-RGB_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 123
-        width: 32
-        height: 41
+        x: 382
+        y: 483
+        width: 191
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,83 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36525d16446c04042829102574fff7b7
-      internalID: 1674384486
+      spriteID: 084d1c6d934c9224983e23f258ae32db
+      internalID: -701409031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 82
-        width: 32
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e6ce29224db9c2428c4927220f60d05
-      internalID: -1546967175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster_1_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 82
-        width: 32
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7068dea95d6645419ed6aedf26a43ba
-      internalID: 1973587861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster_1_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 82
-        width: 32
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3cab71755b167ab4687d8184a641a15c
-      internalID: 2030588246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster_1_6
+      name: flying_dragon-red-RGB_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 41
-        width: 32
-        height: 41
+        y: 322
+        width: 191
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6245e548885b2ed45b6c5e46098de19e
-      internalID: 1207748559
+      spriteID: b9fd5ce2fa5e1f849b6b04966141819a
+      internalID: -556299165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_7
+      name: flying_dragon-red-RGB_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 41
-        width: 32
-        height: 41
+        x: 191
+        y: 322
+        width: 191
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dc02109ac6ad114288eb2535beecd9a
-      internalID: -1261886890
+      spriteID: 38957e3b5062ca3499dd8071a5a8d6f1
+      internalID: -632040675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_8
+      name: flying_dragon-red-RGB_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 41
-        width: 32
-        height: 41
+        x: 382
+        y: 322
+        width: 191
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +229,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be1787466683e7e44a5b63b1698cc45e
-      internalID: 1540823051
+      spriteID: 1ebd5964e77146046932f6f1e034f1cf
+      internalID: 1175724387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_9
+      name: flying_dragon-red-RGB_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 161
+        width: 191
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f3019d25360ce4f89e32e874d7cb01
+      internalID: -257625033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_dragon-red-RGB_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 161
+        width: 191
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54fee872169767a43a7756503bdea8b2
+      internalID: 494682708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_dragon-red-RGB_8
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 161
+        width: 191
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d36c5c20e8eb9b43a2e2e1c62fcf65e
+      internalID: 1906405735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_dragon-red-RGB_9
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 41
+        width: 191
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 958d47d39652d11448b94ead4a609265
-      internalID: -1805917380
+      spriteID: 1b8e4afaddbf8da4dbdf78e83716f524
+      internalID: 1225624074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_10
+      name: flying_dragon-red-RGB_10
       rect:
         serializedVersion: 2
-        x: 32
+        x: 191
         y: 0
-        width: 32
-        height: 41
+        width: 191
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bde82944d7e76894393b3ee26b6f1b3b
-      internalID: -2028433949
+      spriteID: 32517365dd1a06d47bf83ce2698d9ecf
+      internalID: -771470537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_11
+      name: flying_dragon-red-RGB_11
       rect:
         serializedVersion: 2
-        x: 64
+        x: 382
         y: 0
-        width: 32
-        height: 41
+        width: 191
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,8 +355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50c646f735b670e4abcfdf95ea8a7e31
-      internalID: 882640958
+      spriteID: c8c7addda8674c64b92ae8133da87e72
+      internalID: -1602278894
       vertices: []
       indices: 
       edges: []
@@ -372,18 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Monster_1_0: 59918291
-      Monster_1_1: -946330426
-      Monster_1_10: -2028433949
-      Monster_1_11: 882640958
-      Monster_1_2: 1674384486
-      Monster_1_3: -1546967175
-      Monster_1_4: 1973587861
-      Monster_1_5: 2030588246
-      Monster_1_6: 1207748559
-      Monster_1_7: -1261886890
-      Monster_1_8: 1540823051
-      Monster_1_9: -1805917380
+      flying_dragon-red-RGB_0: -392653459
+      flying_dragon-red-RGB_1: -1932614822
+      flying_dragon-red-RGB_10: -771470537
+      flying_dragon-red-RGB_11: -1602278894
+      flying_dragon-red-RGB_2: -701409031
+      flying_dragon-red-RGB_3: -556299165
+      flying_dragon-red-RGB_4: -632040675
+      flying_dragon-red-RGB_5: 1175724387
+      flying_dragon-red-RGB_6: -257625033
+      flying_dragon-red-RGB_7: 494682708
+      flying_dragon-red-RGB_8: 1906405735
+      flying_dragon-red-RGB_9: 1225624074
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
