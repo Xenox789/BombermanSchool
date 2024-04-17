@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     public float moveSpeed = 5f;
     public int playerNumber = 1;
 
-    //public GameObject bombPrefab;
 
     private Vector2 movementDirection;
     private Rigidbody2D rb;
@@ -26,12 +25,16 @@ public class Player : MonoBehaviour
     private MovementSpriteRenderer activeSpriteRenderer;
     private bool isInviolable;
 
-
+    private bool canFly = false; 
+    private bool isFlying = false;
+public bool isOnWallOrBox;
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         activeSpriteRenderer = spriteRendererDown;
         isInviolable = false;
+        isOnWallOrBox = false;
     }
 
     public void SetInviolable()
@@ -74,10 +77,17 @@ public class Player : MonoBehaviour
 
     }
 
+
+    
     void FixedUpdate()
     {
 
-        rb.MovePosition(rb.position + movementDirection * moveSpeed * Time.fixedDeltaTime);
+        if(isFlying)
+            MovePlayer(movementDirection);
+        else{ 
+            rb.MovePosition(rb.position + movementDirection * moveSpeed * Time.fixedDeltaTime);
+            
+        }
     }
 
     private void SetDirection(Vector2 newDirection, MovementSpriteRenderer spriteRenderer)
@@ -101,15 +111,69 @@ public class Player : MonoBehaviour
                 Death();
 
             }
-            if (collision.gameObject.CompareTag("Monster"))
+            else if (collision.gameObject.CompareTag("Monster"))
             {
                 Death();
 
             }
+
+        }
+    
+        
+    }
+    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        
+        if (other.CompareTag("Explosion"))
+        {
+            Death(); 
+        }
+
+        if (other.CompareTag("Monster"))
+        {
+            Death();
+        }
+        if (other.CompareTag("Wall") || other.CompareTag("Box")|| other.CompareTag("fakeBox"))
+        {
+            isOnWallOrBox = true; 
         }
     }
+    
 
+   
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Wall") || other.CompareTag("Box")|| other.CompareTag("fakeBox"))
+        {
+            isOnWallOrBox = false; 
+        }
+    }
+    private void MovePlayer(Vector2 direction)
+    {
+        Vector2 newPosition = rb.position + moveSpeed * Time.fixedDeltaTime * direction;
+        
+        
+        if (!IsPositionWithinBounds(newPosition))
+        {
+            newPosition = ClampPositionToBounds(newPosition);
+        }
+        
+        rb.MovePosition(newPosition);
+    }
 
+    public bool IsPositionWithinBounds(Vector2 position)
+    {
+        return position.x >= -0.1f && position.x <= 14.1f && position.y >= -0.1f && position.y <= 10.1f;
+    }
+
+    
+    public Vector2 ClampPositionToBounds(Vector2 position)
+    {
+        float x = Mathf.Clamp(position.x, -0.1f, 14.1f);
+        float y = Mathf.Clamp(position.y, -0.1f, 10.1f);
+        return new Vector2(x, y);
+    }
 
     public void Death()
     {
@@ -130,5 +194,25 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void ActivateFlyingPowerUp()
+    {
+        canFly = true;
+        isFlying = true;
+        GetComponent<Collider2D>().isTrigger = true;
+        StartCoroutine(DeactivateFlyingPowerUpAfterDelay(10f));
+    }
+
+    
+    private IEnumerator DeactivateFlyingPowerUpAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        canFly = false;
+        isFlying = false;
+        GetComponent<Collider2D>().isTrigger = false;
+        if(isOnWallOrBox)
+        {
+            Death();
+        }
+    }
 
 }

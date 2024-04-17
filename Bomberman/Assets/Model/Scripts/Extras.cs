@@ -13,6 +13,7 @@ public class Extras : MonoBehaviour
         fakeBoxExtra,
         ExtraInvioable,
         ExtraDetonator,
+        Ghost,
     }
     
     public ItemType type;
@@ -40,6 +41,9 @@ public class Extras : MonoBehaviour
                 break;
             case ItemType.ExtraDetonator:
                 player.GetComponent<BombController>().SetDetonatable();
+                break;
+            case ItemType.Ghost:
+                player.GetComponent<Player>().ActivateFlyingPowerUp();
                 break;
         }
 
