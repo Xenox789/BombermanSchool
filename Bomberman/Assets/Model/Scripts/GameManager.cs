@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
+using System.IO;
+using System.Globalization;
 
 
 public class GameManager : MonoBehaviour
@@ -17,7 +20,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI player2ScoreText;
 
     void Start()
-    {        
+    {
         playerScores = new int[2]; 
         playerScores[0] = 0;
         playerScores[1] = 0;
@@ -77,5 +80,5 @@ public class GameManager : MonoBehaviour
         Destroy(gameObject); 
     }
 
-    
+
 }

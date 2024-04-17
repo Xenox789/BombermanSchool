@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     private MovementSpriteRenderer activeSpriteRenderer;
 
 
+    [SerializeField] private static GameObject player1Prefab;
+    [SerializeField] private static GameObject player2Prefab;
 
     void Start()
     {
@@ -114,5 +116,13 @@ public class Player : MonoBehaviour
         }
     }
     
+    public static void Create1(Vector3 position)
+    {
+        Instantiate(player1Prefab, position, Quaternion.identity);
+    }
 
+    public static void Create2(Vector3 position)
+    {
+        Instantiate(player2Prefab, position, Quaternion.identity);
+    }
 }
