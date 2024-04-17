@@ -17,7 +17,7 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {
-        // DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
         // GenerateLevel();
         LoadLevel();
 
