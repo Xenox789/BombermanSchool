@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2403442482607208785}
   - component: {fileID: 6870729613315188334}
   - component: {fileID: 5275708483360986287}
+  - component: {fileID: 5469569306132612107}
   m_Layer: 7
   m_Name: Bomb
   m_TagString: Bomb
@@ -148,3 +149,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &5469569306132612107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5203171719691610081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea4ea6036084694a97c40818ad05a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallPrefab: {fileID: 4322182885635882631, guid: 0a5e11550db7164429666baf670892e6, type: 3}
+  boxPrefab: {fileID: 6993983932485415187, guid: 575a96aa13cb3bd499941c1b0af87592, type: 3}
+  explosionLayerMask:
+    serializedVersion: 2
+    m_Bits: 2817
+  explosionPrefab: {fileID: 8275139342278380538, guid: 34389dbc327ec7d4b96988633c46cb12, type: 3}
+  groundPrefab: {fileID: 2363665083769223222, guid: 75f7697320c05cc4aa6a2aea0d87d91c, type: 3}
+  inputKey: 0
+  bombDropDelay: 3
+  extras:
+  - {fileID: 5623331565126395140, guid: db1854e9437c91b4ebf3ee7957603c6e, type: 3}
+  - {fileID: 506007962793218916, guid: 2abcbc42d3f7b9f4ea6e559c995e4cc0, type: 3}
+  - {fileID: 4387904694027012484, guid: 510527f429dd35a45a141ba6423cd084, type: 3}
+  - {fileID: 2894922568442380664, guid: aab77fe30ffbea14baac381a631a78b6, type: 3}
+  - {fileID: 670339305318175614, guid: 5e2964ee09116e14ab40b0886bd34a7c, type: 3}
+  - {fileID: 3941906565301449163, guid: f7485f5fb09d7e941a61ee3269a08963, type: 3}
+  - {fileID: 3645330483359137472, guid: 14cdf29660cdd0b4ca32c24f68d4d609, type: 3}
+  FakeExtra: {fileID: 7599342914771085010, guid: 4a91b7bec681a0647a37fe0d0fa0290b, type: 3}

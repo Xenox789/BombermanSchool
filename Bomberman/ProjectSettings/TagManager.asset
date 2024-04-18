@@ -9,6 +9,8 @@ TagManager:
   - Bomb
   - Monster
   - Explosion
+  - fakeBox
+  - fakBox
   layers:
   - Default
   - TransparentFX
@@ -19,11 +21,11 @@ TagManager:
   - Explosion
   - Bomb
   - Box
+  - OuterWall
   - Monster
   - Extra
-  - 
-  - 
-  - 
+  - FakeBox
+  - FlyingMonster
   - 
   - 
   - 
