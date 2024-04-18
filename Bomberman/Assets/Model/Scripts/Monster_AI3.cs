@@ -21,7 +21,7 @@ public class Monszert : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        obstacleLayer = LayerMask.GetMask("Box", "OuterWall");
+        obstacleLayer = LayerMask.GetMask("Box", "OuterWall", "Bomb");
         activeSpriteRenderer = spriteRendererDown;
         transform.position = new Vector2(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y));
         AvailableDirections();

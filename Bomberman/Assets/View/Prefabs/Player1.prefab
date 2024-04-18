@@ -408,6 +408,7 @@ MonoBehaviour:
   spriteRendererDown: {fileID: 6839004927893738977}
   spriteRendererLeft: {fileID: 6649617964492932391}
   spriteRendererRight: {fileID: 4822671800978088619}
+  isOnWallOrBox: 0
 --- !u!114 &3218945889826569462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,7 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fakeBoxPrefab: {fileID: 5369293032104308904, guid: 4c316f5116367f147b907a38e7f9de38, type: 3}
   inputKey: 303
-  remainingFakeBox: 3
+  remainingFakeBox: 0
 --- !u!1 &8726095663498584431
 GameObject:
   m_ObjectHideFlags: 0

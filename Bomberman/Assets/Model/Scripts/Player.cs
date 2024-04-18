@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 
    
     private bool isFlying = false;
-public bool isOnWallOrBox;
+    public bool isOnWallOrBox;
     void Start()
     {
         
@@ -129,8 +129,7 @@ public bool isOnWallOrBox;
         {
             Death(); 
         }
-
-        if (other.CompareTag("Monster"))
+        else if (other.CompareTag("Monster"))
         {
             Death();
         }
@@ -228,8 +227,8 @@ public bool isOnWallOrBox;
         }
     }
 
-    public static void Create2(Vector3 position)
+    /*public static void Create2(Vector3 position)
     {
         Instantiate(player2Prefab, position, Quaternion.identity);
-    }
+    }*/
 }

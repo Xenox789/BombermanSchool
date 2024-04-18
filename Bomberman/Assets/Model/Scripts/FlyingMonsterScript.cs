@@ -27,8 +27,8 @@ public class FlyingMonsterScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        obstacleLayer = LayerMask.GetMask("Box", "OuterWall");
-        flyingIgnoreLayer = LayerMask.GetMask("Box");
+        obstacleLayer = LayerMask.GetMask("Box", "OuterWall", "Bomb");
+        flyingIgnoreLayer = LayerMask.GetMask("Box", "Bomb");
         flyingObstacleLayer = LayerMask.GetMask("OuterWall");
         flyingLayer = LayerMask.GetMask("FlyingMonster");
         normalLayer = LayerMask.GetMask("Monster");
