@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: 790a27942266abe449a5596b4cfa51c0
+guid: eea4ea6036084694a97c40818ad05a5d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - bombPrefab: {fileID: 5203171719691610081, guid: de50df330a2c65d418c5502444a38310, type: 3}
   - wallPrefab: {fileID: 4322182885635882631, guid: 0a5e11550db7164429666baf670892e6, type: 3}
   - boxPrefab: {fileID: 6993983932485415187, guid: 575a96aa13cb3bd499941c1b0af87592, type: 3}
   - explosionPrefab: {fileID: 8275139342278380538, guid: 34389dbc327ec7d4b96988633c46cb12, type: 3}
   - groundPrefab: {fileID: 2363665083769223222, guid: 75f7697320c05cc4aa6a2aea0d87d91c, type: 3}
-  - plusBombPrefab: {fileID: 5623331565126395140, guid: db1854e9437c91b4ebf3ee7957603c6e, type: 3}
-  - increaseSpeedPrefab: {fileID: 2894922568442380664, guid: aab77fe30ffbea14baac381a631a78b6, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

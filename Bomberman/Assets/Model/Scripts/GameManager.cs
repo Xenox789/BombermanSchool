@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
+using System.IO;
+using System.Globalization;
 
 
 public class GameManager : MonoBehaviour
@@ -15,10 +18,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] players;
     public TextMeshProUGUI player1ScoreText;
     public TextMeshProUGUI player2ScoreText;
+    private bool CheckAlive;
 
     void Start()
-    {        
-        playerScores = new int[2]; 
+    {
+        playerScores = new int[2];
+        players = new GameObject[2];
         playerScores[0] = 0;
         playerScores[1] = 0;
     }
@@ -26,8 +31,14 @@ public class GameManager : MonoBehaviour
 
     public void CheckWin()
     {
-                                
-        Invoke(nameof(NewRound), 3f);            
+        
+        if(!CheckAlive)
+        {
+            CheckAlive = true;
+            Invoke(nameof(NewRound), 3f);
+        }
+        
+                   
         
 
     }
@@ -59,6 +70,7 @@ public class GameManager : MonoBehaviour
             MessageBox(1);
         else if(playerScores[1] == 3)
             MessageBox(2);
+        CheckAlive = false;
                 
         
         
@@ -73,9 +85,9 @@ public class GameManager : MonoBehaviour
     void RestartGame()
     {
         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Menu");
         Destroy(gameObject); 
     }
 
-    
+
 }

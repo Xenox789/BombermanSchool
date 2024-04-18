@@ -2,21 +2,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Globalization;
+using UnityEditor;
 
 public class LevelGenerator : MonoBehaviour
 {
     public GameObject wallPrefab;
+    public GameObject outerWallPrefab;
     public GameObject boxPrefab;
     public GameObject grassPrefab;
     public GameObject player1Prefab;
     public GameObject player2Prefab;
     public GameObject monster1Prefab;
+    public GameObject flyingMonsterPrefab;
+
     public int width = 15;
     public int height = 11;
 
     void Start()
     {
-        
+        // DontDestroyOnLoad(gameObject);
         GenerateLevel();
         //LoadLevel();
 
@@ -57,6 +61,14 @@ public class LevelGenerator : MonoBehaviour
                 {
                     Instantiate(monster1Prefab, new Vector3(x, y), Quaternion.identity);
                 }
+                else if (x == width /2 && y == height - 2)
+                {
+                    Instantiate(flyingMonsterPrefab, new Vector3(x, y), Quaternion.identity);
+                }
+                else if (x == width / 2 && y == 1)
+                {
+                    Instantiate(flyingMonsterPrefab, new Vector3(x, y), Quaternion.identity);
+                }
                 else if (x == width - 2 && y == 1)
                 {
                     Vector2 rightSpawnPosition = new Vector2(x, y);
@@ -67,7 +79,7 @@ public class LevelGenerator : MonoBehaviour
                 // Falak a sz�l�n
                 else if (x == 0 || y == 0 || x == width - 1 || y == height - 1)
                 {
-                    tileObject = Instantiate(wallPrefab, new Vector2(x, y), Quaternion.identity);
+                    tileObject = Instantiate(outerWallPrefab, new Vector2(x, y), Quaternion.identity);
                     tileObjects.Add(tileObject);
                 }
                 // Falak minden m�sodik mez?n bel�l
@@ -90,9 +102,6 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-
-    // Dani
-
     // List to store the gameobjects (prefabs)
     [SerializeField] private List<GameObject> tileObjects;
 
@@ -100,13 +109,12 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private string saveFileName = "level1.bml";
     [SerializeField] private string loadFileName = "level2.bml";
 
-    void SaveLevel()
+    public void SaveLevel()
     {
         string saveFilePath = Application.streamingAssetsPath + "/Levels/" + saveFileName;
 
         Directory.CreateDirectory(Application.streamingAssetsPath + "/Levels/");
 
-        // return if the file exists
         if (File.Exists(saveFilePath))
             return;
 
@@ -121,7 +129,7 @@ public class LevelGenerator : MonoBehaviour
         File.WriteAllLines(saveFilePath, saveData);
     }
 
-    void LoadLevel()
+    public void LoadLevel()
     {
         string loadFilePath = Application.streamingAssetsPath + "/Levels/" + loadFileName;
 
@@ -135,7 +143,6 @@ public class LevelGenerator : MonoBehaviour
 
             GameObject tileObject;
 
-            // switch on the gameObject type
             switch (line[0])
             {
                 case "Box(Clone)":
@@ -146,6 +153,7 @@ public class LevelGenerator : MonoBehaviour
                     break;
                 case "Player1(Clone)":
                     tileObject = Instantiate(player1Prefab, StringToVector3(line[1]), Quaternion.identity);
+                    // Player.Create1(StringToVector3(line[1]));
                     break;
                 case "Player2(Clone)":
                     tileObject = Instantiate(player2Prefab, StringToVector3(line[1]), Quaternion.identity);

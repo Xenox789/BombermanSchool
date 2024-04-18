@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 6467865789271097459}
   - component: {fileID: 3823147239152194822}
   - component: {fileID: 4005438477784413495}
+  - component: {fileID: -3658716542665278603}
   m_Layer: 3
   m_Name: Player2
   m_TagString: Player
@@ -502,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e366c8d84f8f8e048a0321a247cb9cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2.5
   playerNumber: 2
   inputUp: 119
   inputDown: 115
@@ -525,7 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 790a27942266abe449a5596b4cfa51c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombPrefab: {fileID: 5203171719691610081, guid: de50df330a2c65d418c5502444a38310, type: 3}
+  bombPrefab: {fileID: 5469569306132612107, guid: de50df330a2c65d418c5502444a38310, type: 3}
   wallPrefab: {fileID: 4322182885635882631, guid: 0a5e11550db7164429666baf670892e6, type: 3}
   boxPrefab: {fileID: 6993983932485415187, guid: 575a96aa13cb3bd499941c1b0af87592, type: 3}
   explosionLayerMask:
@@ -541,6 +542,8 @@ MonoBehaviour:
   - {fileID: 5623331565126395140, guid: db1854e9437c91b4ebf3ee7957603c6e, type: 3}
   - {fileID: 4387904694027012484, guid: 510527f429dd35a45a141ba6423cd084, type: 3}
   - {fileID: 2894922568442380664, guid: aab77fe30ffbea14baac381a631a78b6, type: 3}
+  - {fileID: 670339305318175614, guid: 5e2964ee09116e14ab40b0886bd34a7c, type: 3}
+  - {fileID: 3653966071351958217, guid: 2abcbc42d3f7b9f4ea6e559c995e4cc0, type: 3}
   explosionRadius: 2
 --- !u!58 &4005438477784413495
 CircleCollider2D:
@@ -577,3 +580,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.27}
   serializedVersion: 2
   m_Radius: 0.48
+--- !u!114 &-3658716542665278603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8153010243954701243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df398a417f618c4880cf5c46b89e8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fakeBoxPrefab: {fileID: 5369293032104308904, guid: 4c316f5116367f147b907a38e7f9de38, type: 3}
+  inputKey: 9
+  remainingFakeBox: 0

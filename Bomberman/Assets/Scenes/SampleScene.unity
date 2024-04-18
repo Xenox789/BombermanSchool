@@ -123,6 +123,55 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &243361572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 243361574}
+  - component: {fileID: 243361573}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &243361573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243361572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7baa669c2aae2864ea8b289714e84c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalRounds: 3
+  playerScores: 
+  players: []
+  player1ScoreText: {fileID: 740947921}
+  player2ScoreText: {fileID: 1137032547}
+--- !u!4 &243361574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243361572}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 522.1859, y: 252.29082, z: -3.6406322}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &333394713
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,57 +417,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &656173582
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 656173584}
-  - component: {fileID: 656173583}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: GameController
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &656173583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656173582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7baa669c2aae2864ea8b289714e84c74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalRounds: 3
-  playerScores: 0000000000000000
-  players:
-  - {fileID: 8632293756733120285, guid: 1733cbb0861a11f4eaf2ab22f1b02634, type: 3}
-  - {fileID: 8153010243954701243, guid: 5469d69f10c8b154db960e08ceaeb286, type: 3}
-  player1ScoreText: {fileID: 740947921}
-  player2ScoreText: {fileID: 1137032547}
---- !u!4 &656173584
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656173582}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.697526, y: -3.5022511, z: -10.021664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1060,11 +1058,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallPrefab: {fileID: 4322182885635882631, guid: 0a5e11550db7164429666baf670892e6, type: 3}
+  outerWallPrefab: {fileID: 4322182885635882631, guid: ca630bb0d00e427458b8711ce1b0354e, type: 3}
   boxPrefab: {fileID: 6993983932485415187, guid: 575a96aa13cb3bd499941c1b0af87592, type: 3}
   grassPrefab: {fileID: 2363665083769223222, guid: 75f7697320c05cc4aa6a2aea0d87d91c, type: 3}
   player1Prefab: {fileID: 8632293756733120285, guid: 1733cbb0861a11f4eaf2ab22f1b02634, type: 3}
   player2Prefab: {fileID: 8153010243954701243, guid: 5469d69f10c8b154db960e08ceaeb286, type: 3}
   monster1Prefab: {fileID: 6902604740643719872, guid: 7b5a0d10b274e294994f72e25124a334, type: 3}
+  flyingMonsterPrefab: {fileID: 3412916609210279137, guid: f019d14933a2c9b4cacf39508a1d35df, type: 3}
   width: 15
   height: 11
   tileObjects: []
@@ -1078,6 +1078,6 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 2025028565}
   - {fileID: 333394714}
-  - {fileID: 656173584}
   - {fileID: 1976100818}
   - {fileID: 1138138839}
+  - {fileID: 243361574}
