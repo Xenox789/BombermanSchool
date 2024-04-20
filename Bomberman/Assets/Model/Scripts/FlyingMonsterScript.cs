@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlyingMonsterScript : MonoBehaviour
 {
 
-    public float speed = 1.0f;
+    public float speed = 0.75f;
     private Rigidbody2D rb;
     public Vector2 movementDirection;
     public List<Vector2> avDirections;
@@ -28,8 +28,8 @@ public class FlyingMonsterScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         obstacleLayer = LayerMask.GetMask("Box", "OuterWall", "Bomb");
-        flyingIgnoreLayer = LayerMask.GetMask("Box", "Bomb");
-        flyingObstacleLayer = LayerMask.GetMask("OuterWall");
+        flyingIgnoreLayer = LayerMask.GetMask("Box");
+        flyingObstacleLayer = LayerMask.GetMask("OuterWall", "Bomb");
         flyingLayer = LayerMask.GetMask("FlyingMonster");
         normalLayer = LayerMask.GetMask("Monster");
 
@@ -67,6 +67,7 @@ public class FlyingMonsterScript : MonoBehaviour
 
                     isFlying = true;
                     gameObject.layer = 13;
+                    ChangeDirections();
                 }
                 else
                 {
@@ -126,8 +127,12 @@ public class FlyingMonsterScript : MonoBehaviour
     }
     private void MoveMonster()
     {
-        Vector2 targetPosition = new Vector2(Mathf.Round(transform.position.x + movementDirection.x), Mathf.Round(transform.position.y + movementDirection.y));
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+        if(movementDirection != Vector2.zero)
+        {
+            Vector2 targetPosition = new Vector2(Mathf.Round(transform.position.x + movementDirection.x), Mathf.Round(transform.position.y + movementDirection.y));
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+        }
+      
     }
 
     private void AvailableDirections()
@@ -192,6 +197,10 @@ public class FlyingMonsterScript : MonoBehaviour
                 {
                     ChangeDirections();
                 }
+                else
+                {
+                    movementDirection = Vector2.zero;
+                }
             }
 
         }
@@ -201,6 +210,10 @@ public class FlyingMonsterScript : MonoBehaviour
             if(avDirections.Count >= 1)
             {
                 ChangeDirections();
+            }
+            else
+            {
+                movementDirection = Vector2.zero;
             }
             
         }
