@@ -150,7 +150,7 @@ public class Bomb : MonoBehaviour
         Explode(explosionPosition, direction, length - 1);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
 
         if (collision.gameObject.CompareTag("Explosion"))
