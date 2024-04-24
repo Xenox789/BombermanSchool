@@ -3,6 +3,7 @@ using UnityEngine;
 using System.IO;
 using System.Globalization;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -22,10 +23,29 @@ public class LevelGenerator : MonoBehaviour
     {
         // DontDestroyOnLoad(gameObject);
         GenerateLevel();
-        //LoadLevel();
+        // LoadLevel();
 
         // SaveLevel();
     }
+
+    /* void OnEnable()
+    {
+        // Subscribe to the scene loaded event
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        // Unsubscribe from the scene loaded event
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        //Debug.Log("Scene loaded: " + scene.name);
+        // You can perform any necessary actions here
+        DontDestroyOnLoad(gameObject);
+    } */
 
     public void GenerateLevel()
     {

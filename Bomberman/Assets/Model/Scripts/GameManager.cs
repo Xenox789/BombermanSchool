@@ -26,6 +26,27 @@ public class GameManager : MonoBehaviour
         players = new GameObject[2];
         playerScores[0] = 0;
         playerScores[1] = 0;
+
+        DontDestroyOnLoad(gameObject);
+    }
+
+    void OnEnable()
+    {
+        // Subscribe to the scene loaded event
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        // Unsubscribe from the scene loaded event
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        //Debug.Log("Scene loaded: " + scene.name);
+        // You can perform any necessary actions here
+        DontDestroyOnLoad(gameObject);
     }
 
 
