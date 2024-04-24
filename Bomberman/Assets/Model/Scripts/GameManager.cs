@@ -79,8 +79,11 @@ public class GameManager : MonoBehaviour
 
     public void MessageBox(int playerIndex)
     {
+    #if UNITY_EDITOR
         bool output = EditorUtility.DisplayDialog("Game Over","Game Over. Player " + playerIndex + " wins!","ok");
-        if(output) RestartGame();
+        if(output)
+        RestartGame();
+    #endif
     }
     void RestartGame()
     {
