@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2df398a417f618c4880cf5c46b89e8fa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+<<<<<<< HEAD
+  defaultReferences:
+  - fakeBoxPrefab: {fileID: 5369293032104308904, guid: 4c316f5116367f147b907a38e7f9de38, type: 3}
+=======
+  defaultReferences: []
+>>>>>>> Bomb
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
