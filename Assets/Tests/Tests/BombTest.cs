@@ -21,7 +21,7 @@ public class BombTests
      [Test]
     public void Bomb_ExplodesObjectsAroundProperly()
     {
-        // Arrange
+       
         GameObject bombObject = new GameObject();
         Bomb bomb = bombObject.AddComponent<Bomb>();
         bomb.explosionPrefab = new GameObject();
@@ -54,7 +54,7 @@ public class BombTests
      [Test]
     public void DetonatableBomb_DetonatesProperly()
     {
-        // Arrange
+        
         GameObject bombObject = new GameObject();
         Bomb bomb = bombObject.AddComponent<Bomb>();
         bomb.explosionPrefab = new GameObject(); 
