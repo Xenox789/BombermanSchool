@@ -127,5 +127,3 @@ crashlytics-build.properties
 
 # Blender backups
 *.blend[1-9]*
-/.vs/slnx.sqlite
-/.vs/VSWorkspaceState.json
