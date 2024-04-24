@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public int playerNumber = 1;
 
 
-    private Vector2 movementDirection;
+    public Vector2 movementDirection;
     private Rigidbody2D rb;
     private bool IsPowerUpEnable = true;
 
@@ -23,12 +23,12 @@ public class Player : MonoBehaviour
     public MovementSpriteRenderer spriteRendererLeft;
     public MovementSpriteRenderer spriteRendererRight;
     private MovementSpriteRenderer activeSpriteRenderer;
-    private bool isInviolable;
+    public bool isInviolable;
 
    
-    private bool isFlying = false;
+    public bool isFlying = false;
     public bool isOnWallOrBox;
-    void Start()
+    public void Start()
     {
         
         rb = GetComponent<Rigidbody2D>();
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Update()
+    public void Update()
     {
         if (Input.GetKey(inputUp))
         {
@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
         activeSpriteRenderer.idle = movementDirection == Vector2.zero;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (!isInviolable)
         {
@@ -146,7 +146,7 @@ public class Player : MonoBehaviour
             isOnWallOrBox = false; 
         }
     }
-    private void MovePlayer(Vector2 direction)
+    public void MovePlayer(Vector2 direction)
     {
         Vector2 newPosition = rb.position + moveSpeed * Time.fixedDeltaTime * direction;
         
