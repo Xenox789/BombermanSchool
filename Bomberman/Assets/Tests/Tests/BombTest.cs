@@ -59,7 +59,7 @@ public class BombTests
         Bomb bomb = bombObject.AddComponent<Bomb>();
         bomb.explosionPrefab = new GameObject(); 
          bomb.SetExplosionradius(1); 
-        bomb.SetDetonatable(true); // Beállítjuk a bombát detonálhatóvá
+        bomb.SetDetonatable(true); 
 
       
         bomb.SetStartExplode(true); 
