@@ -11,14 +11,29 @@ using System.Globalization;
 
 public class GameManager : MonoBehaviour
 {
-    
+    public static GameManager Instance;
 
     public int totalRounds = 3; 
     public int[] playerScores;
     public GameObject[] players;
     public TextMeshProUGUI player1ScoreText;
     public TextMeshProUGUI player2ScoreText;
+
+
     private bool CheckAlive;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -58,10 +73,6 @@ public class GameManager : MonoBehaviour
             CheckAlive = true;
             Invoke(nameof(NewRound), 3f);
         }
-        
-                   
-        
-
     }
     public void NewRound()
     {
@@ -100,8 +111,11 @@ public class GameManager : MonoBehaviour
 
     public void MessageBox(int playerIndex)
     {
+    #if UNITY_EDITOR
         bool output = EditorUtility.DisplayDialog("Game Over","Game Over. Player " + playerIndex + " wins!","ok");
-        if(output) RestartGame();
+        if(output)
+        RestartGame();
+    #endif
     }
     void RestartGame()
     {
