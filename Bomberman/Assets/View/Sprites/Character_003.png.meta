@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1e3287081702f94a9a1b364ff5be6b7
+guid: 3337d5e61b5096543bc6316aa5bac659
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 36
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,253 +110,337 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Monster_1_0
+      name: Character_003_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 123
-        width: 27
-        height: 40
+        x: 6
+        y: 72
+        width: 12
+        height: 19
       alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f8e07920b834924da364cd3dc1a1db0
-      internalID: 59918291
+      spriteID: 3145830b25a05d24ebff760479625610
+      internalID: -345906620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_1
+      name: Character_003_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 123
-        width: 29
-        height: 41
+        x: 30
+        y: 73
+        width: 12
+        height: 19
       alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cd4550326966174ca4e7df505a82692
-      internalID: -946330426
+      spriteID: 4028998f398e7144a8f6a254ee89cf1c
+      internalID: 1689888979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_2
+      name: Character_003_2
       rect:
         serializedVersion: 2
-        x: 67
-        y: 123
-        width: 28
-        height: 40
+        x: 54
+        y: 72
+        width: 12
+        height: 19
       alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36525d16446c04042829102574fff7b7
-      internalID: 1674384486
+      spriteID: db95d295c5a7db145b2f1c3dfa54846c
+      internalID: 938330507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_3
+      name: Character_003_3
       rect:
         serializedVersion: 2
-        x: 4
-        y: 82
-        width: 28
-        height: 40
+        x: 78
+        y: 73
+        width: 12
+        height: 19
       alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e6ce29224db9c2428c4927220f60d05
-      internalID: -1546967175
+      spriteID: d0001441cdcdfc34c9d1889fc13e6317
+      internalID: 1654303765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_4
+      name: Character_003_4
       rect:
         serializedVersion: 2
-        x: 36
-        y: 82
-        width: 28
-        height: 41
+        x: 8
+        y: 48
+        width: 8
+        height: 19
       alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7068dea95d6645419ed6aedf26a43ba
-      internalID: 1973587861
+      spriteID: 6047913087576b74d8cdb6428d48c566
+      internalID: -1977729329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_5
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 82
-        width: 28
-        height: 40
-      alignment: 9
-      pivot: {x: 0.5, y: 0.3}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3cab71755b167ab4687d8184a641a15c
-      internalID: 2030588246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster_1_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 41
-        width: 28
-        height: 40
-      alignment: 9
-      pivot: {x: 0.5, y: 0.3}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6245e548885b2ed45b6c5e46098de19e
-      internalID: 1207748559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster_1_7
+      name: Character_003_5
       rect:
         serializedVersion: 2
         x: 32
-        y: 41
-        width: 28
-        height: 41
+        y: 49
+        width: 8
+        height: 19
       alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dc02109ac6ad114288eb2535beecd9a
-      internalID: -1261886890
+      spriteID: b0ba7ca26ae9a364b9779c3f3c2bad13
+      internalID: 958458357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_8
+      name: Character_003_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 41
-        width: 28
-        height: 40
+        x: 56
+        y: 48
+        width: 8
+        height: 19
       alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be1787466683e7e44a5b63b1698cc45e
-      internalID: 1540823051
+      spriteID: dd2091e48bc9b59478ee764afbc2926a
+      internalID: 1193585213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_9
+      name: Character_003_7
       rect:
         serializedVersion: 2
-        x: 2
+        x: 80
+        y: 49
+        width: 8
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f197f98a2a77ba489e686011829f2e3
+      internalID: 1449751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_003_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 24
+        width: 8
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0dbe055cfae22438c18d7467aec0a6
+      internalID: -1531886991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_003_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 25
+        width: 8
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6948213991316274c98d0555f8db5559
+      internalID: -1984713452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_003_10
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 24
+        width: 8
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b60302b984ed6b4a8ae41f624641567
+      internalID: -2096079985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_003_11
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 25
+        width: 8
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f444a4051cfd048909e48e7bfd0f91
+      internalID: 1549463260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_003_12
+      rect:
+        serializedVersion: 2
+        x: 6
         y: 0
-        width: 28
-        height: 37
+        width: 12
+        height: 19
       alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 958d47d39652d11448b94ead4a609265
-      internalID: -1805917380
+      spriteID: 14ae1ad6570d8864b9e3a32f3131196f
+      internalID: -605586316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_10
+      name: Character_003_13
       rect:
         serializedVersion: 2
-        x: 35
-        y: 0
-        width: 27
-        height: 37
+        x: 30
+        y: 1
+        width: 12
+        height: 19
       alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bde82944d7e76894393b3ee26b6f1b3b
-      internalID: -2028433949
+      spriteID: 0ab2bd5462325014592f8f877d369a2b
+      internalID: -1186482872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_1_11
+      name: Character_003_14
       rect:
         serializedVersion: 2
-        x: 67
+        x: 54
         y: 0
-        width: 27
-        height: 37
+        width: 12
+        height: 19
       alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50c646f735b670e4abcfdf95ea8a7e31
-      internalID: 882640958
+      spriteID: dbc39fb3d66828749b2af79caffbc42f
+      internalID: -1602288701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_003_15
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1
+        width: 12
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c916f5c0a22b644cbf3bef9605a9333
+      internalID: 2100407771
       vertices: []
       indices: 
       edges: []
@@ -372,18 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Monster_1_0: 59918291
-      Monster_1_1: -946330426
-      Monster_1_10: -2028433949
-      Monster_1_11: 882640958
-      Monster_1_2: 1674384486
-      Monster_1_3: -1546967175
-      Monster_1_4: 1973587861
-      Monster_1_5: 2030588246
-      Monster_1_6: 1207748559
-      Monster_1_7: -1261886890
-      Monster_1_8: 1540823051
-      Monster_1_9: -1805917380
+      Character_003_0: -345906620
+      Character_003_1: 1689888979
+      Character_003_10: -2096079985
+      Character_003_11: 1549463260
+      Character_003_12: -605586316
+      Character_003_13: -1186482872
+      Character_003_14: -1602288701
+      Character_003_15: 2100407771
+      Character_003_2: 938330507
+      Character_003_3: 1654303765
+      Character_003_4: -1977729329
+      Character_003_5: 958458357
+      Character_003_6: 1193585213
+      Character_003_7: 1449751
+      Character_003_8: -1531886991
+      Character_003_9: -1984713452
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

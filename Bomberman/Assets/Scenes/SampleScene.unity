@@ -1065,6 +1065,8 @@ MonoBehaviour:
   player2Prefab: {fileID: 8153010243954701243, guid: 5469d69f10c8b154db960e08ceaeb286, type: 3}
   monster1Prefab: {fileID: 6902604740643719872, guid: 7b5a0d10b274e294994f72e25124a334, type: 3}
   flyingMonsterPrefab: {fileID: 3412916609210279137, guid: f019d14933a2c9b4cacf39508a1d35df, type: 3}
+  smartMonsterPrefab: {fileID: 6902604740643719872, guid: da277d605b6dbb9438b913c83b5ffe21, type: 3}
+  notSoSmartMonsterPrefab: {fileID: 6902604740643719872, guid: 5a28830a533edcf468b66f127fad9c82, type: 3}
   width: 15
   height: 11
   tileObjects: []
