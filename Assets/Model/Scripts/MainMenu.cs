@@ -16,4 +16,14 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quitting application...");
         Application.Quit();
     }
+
+    public void QuitToMain()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void SaveLevel()
+    {
+        FindObjectOfType<LevelGenerator>().SaveLevel(GameManager.Instance.saveFileName);
+    }
 }
