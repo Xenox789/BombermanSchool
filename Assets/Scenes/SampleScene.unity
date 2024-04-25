@@ -180,8 +180,8 @@ MonoBehaviour:
   width: 15
   height: 11
   tileObjects: []
-  saveFileName: level1.bml
-  loadFileName: level2.bml
+  saveFileName: level3.bml
+  loadFileName: level3.bml
 --- !u!1 &333394713
 GameObject:
   m_ObjectHideFlags: 0

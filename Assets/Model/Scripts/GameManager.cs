@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
 
     private bool CheckAlive;
 
+    public string saveFileName;
+    public string loadFileName;
+
     void Awake()
     {
         if (Instance == null)

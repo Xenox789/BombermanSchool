@@ -21,11 +21,18 @@ public class LevelGenerator : MonoBehaviour
     public int width = 15;
     public int height = 11;
 
+    // List to store the gameobjects (prefabs)
+    [SerializeField] private List<GameObject> tileObjects;
+
+    // bml = bomberman level
+    // [SerializeField] private string saveFileName;
+    // [SerializeField] private string loadFileName;
+
     void Start()
     {
         // DontDestroyOnLoad(gameObject);
-        GenerateLevel();
-        // LoadLevel();
+        // GenerateLevel();
+        LoadLevel(GameManager.Instance.loadFileName);
 
         // SaveLevel();
     }
@@ -72,43 +79,43 @@ public class LevelGenerator : MonoBehaviour
                 {
                     Vector2 leftSpawnPosition = new Vector2(x, y);
                     tileObject = Instantiate(player2Prefab, leftSpawnPosition, Quaternion.identity);
-                    tileObjects.Add(tileObject);
+                    // tileObjects.Add(tileObject);
                     GameManager.Instance.players[1] = tileObject;
                 }
                 else if(x == 1 && y == 1)
                 {
-                    Instantiate(monster1Prefab, new Vector3(x,y), Quaternion.identity);
+                    tileObject = Instantiate(monster1Prefab, new Vector3(x,y), Quaternion.identity);
                 }
                 else if (x == width - 2 && y == height-2)
                 {
-                    Instantiate(smartMonsterPrefab, new Vector3(x, y), Quaternion.identity);
+                    tileObject = Instantiate(smartMonsterPrefab, new Vector3(x, y), Quaternion.identity);
                 }
                 else if (x == width /2 && y == height - 2)
                 {
-                    Instantiate(flyingMonsterPrefab, new Vector3(x, y), Quaternion.identity);
+                    tileObject = Instantiate(flyingMonsterPrefab, new Vector3(x, y), Quaternion.identity);
                 }
                 else if (x == width / 2 && y == 1)
                 {
-                    Instantiate(notSoSmartMonsterPrefab, new Vector3(x, y), Quaternion.identity);
+                    tileObject = Instantiate(notSoSmartMonsterPrefab, new Vector3(x, y), Quaternion.identity);
                 }
                 else if (x == width - 2 && y == 1)
                 {
                     Vector2 rightSpawnPosition = new Vector2(x, y);
                     tileObject = Instantiate(player1Prefab, rightSpawnPosition, Quaternion.identity);
-                    tileObjects.Add(tileObject);
+                    // tileObjects.Add(tileObject);
                     GameManager.Instance.players[0] = tileObject;
                 }
                 // Falak a sz�l�n
                 else if (x == 0 || y == 0 || x == width - 1 || y == height - 1)
                 {
                     tileObject = Instantiate(outerWallPrefab, new Vector2(x, y), Quaternion.identity);
-                    tileObjects.Add(tileObject);
+                    // tileObjects.Add(tileObject);
                 }
                 // Falak minden m�sodik mez?n bel�l
                 else if (x % 2 == 0 && y % 2 == 0)
                 {
                     tileObject = Instantiate(wallPrefab, new Vector2(x, y), Quaternion.identity);
-                    tileObjects.Add(tileObject);
+                    // tileObjects.Add(tileObject);
                 }
                 // Dobozok helyez�se a falak k�z�tti r�szeken
                 else
@@ -117,21 +124,15 @@ public class LevelGenerator : MonoBehaviour
                     if (Random.Range(0, 100) < 30) // 30% esély
                     {
                         tileObject = Instantiate(boxPrefab, new Vector2(x, y), Quaternion.identity);
-                        tileObjects.Add(tileObject);
+                        // tileObjects.Add(tileObject);
                     }
                 }
+                tileObjects.Add(tileObject);
             }
         }
     }
 
-    // List to store the gameobjects (prefabs)
-    [SerializeField] private List<GameObject> tileObjects;
-
-    // bml = bomberman level
-    [SerializeField] private string saveFileName = "level1.bml";
-    [SerializeField] private string loadFileName = "level2.bml";
-
-    public void SaveLevel()
+    public void SaveLevel(string saveFileName)
     {
         string saveFilePath = Application.streamingAssetsPath + "/Levels/" + saveFileName;
 
@@ -151,7 +152,7 @@ public class LevelGenerator : MonoBehaviour
         File.WriteAllLines(saveFilePath, saveData);
     }
 
-    public void LoadLevel()
+    public void LoadLevel(string loadFileName)
     {
         string loadFilePath = Application.streamingAssetsPath + "/Levels/" + loadFileName;
 
@@ -173,12 +174,27 @@ public class LevelGenerator : MonoBehaviour
                 case "Grass(Clone)":
                     tileObject = Instantiate(grassPrefab, StringToVector3(line[1]), Quaternion.identity);
                     break;
+                case "FlyingMonster(Clone)":
+                    tileObject = Instantiate(flyingMonsterPrefab, StringToVector3(line[1]), Quaternion.identity);
+                    break;
+                case "Monster1(Clone)":
+                    tileObject = Instantiate(monster1Prefab, StringToVector3(line[1]), Quaternion.identity);
+                    break;
+                case "NotSoSmartMonster 1(Clone)":
+                    tileObject = Instantiate(notSoSmartMonsterPrefab, StringToVector3(line[1]), Quaternion.identity);
+                    break;
+                case "OuterWall(Clone)":
+                    tileObject = Instantiate(outerWallPrefab, StringToVector3(line[1]), Quaternion.identity);
+                    break;
                 case "Player1(Clone)":
                     tileObject = Instantiate(player1Prefab, StringToVector3(line[1]), Quaternion.identity);
                     // Player.Create1(StringToVector3(line[1]));
                     break;
                 case "Player2(Clone)":
                     tileObject = Instantiate(player2Prefab, StringToVector3(line[1]), Quaternion.identity);
+                    break;
+                case "SmartMonster(Clone)":
+                    tileObject = Instantiate(smartMonsterPrefab, StringToVector3(line[1]), Quaternion.identity);
                     break;
                 case "Wall(Clone)":
                     tileObject = Instantiate(wallPrefab, StringToVector3(line[1]), Quaternion.identity);
