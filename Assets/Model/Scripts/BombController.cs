@@ -141,6 +141,7 @@ public class BombController : MonoBehaviour
         Bomb bomb = Instantiate(bombPrefab, position, Quaternion.identity);
         bomb.SetExplosionradius(explosionRadius);
         bomb.SetDetonatable(true);
+        bomb.SetPlayer(gameObject);
 
         IsAnyBombRemaining();
         yield return new WaitUntil(() => _IsAnyBombRemaining);
@@ -180,6 +181,7 @@ public class BombController : MonoBehaviour
 
         Bomb bomb = Instantiate(bombPrefab, position, Quaternion.identity);
         bomb.SetExplosionradius(explosionRadius);
+        bomb.SetPlayer(gameObject);
         yield return new WaitUntil(() => bomb.IsAvailable);
         bombsRemaining++;
 
