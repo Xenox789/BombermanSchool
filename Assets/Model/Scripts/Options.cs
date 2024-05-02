@@ -1,10 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Options : MonoBehaviour
 {
+    [SerializeField] private TMP_Dropdown dropdown;
+
+    private void Awake()
+    {
+        string directory = Application.streamingAssetsPath + "/Levels/";
+
+        string[] files = Directory.GetFiles(directory);
+
+        foreach (string file in files)
+        {
+            dropdown.options.Add(new TMP_Dropdown.OptionData(Path.GetFileName(file)));
+        }
+
+        dropdown.RefreshShownValue();
+    }
+
     public void LoadGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -26,5 +45,13 @@ public class Options : MonoBehaviour
     {
         GameManager.Instance.loadFileName = "level3.bml";
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void SetLevelToLoad()
+    {
+        if (dropdown.value > 0)
+        {
+            GameManager.Instance.loadFileName = dropdown.options[dropdown.value].text;
+        }
     }
 }
