@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
 
+    private GameObject player;
     public GameObject wallPrefab;
     public GameObject boxPrefab;
 
@@ -26,7 +27,10 @@ public class Bomb : MonoBehaviour
 
     }
 
-
+    public void SetPlayer(GameObject _player)
+    {
+        player = _player;
+    }
     private IEnumerator Ex()
     {
 
@@ -122,7 +126,7 @@ public class Bomb : MonoBehaviour
             {
                 GameObject fakeBoxObject = collider.gameObject;
                 Destroy(fakeBoxObject);
-                GetComponent<FakeBoxCrontroller>().AddFakeBox();
+                player.GetComponent<FakeBoxCrontroller>().AddFakeBox();
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
             }
