@@ -154,6 +154,14 @@ public class LevelGenerator : MonoBehaviour
 
     public void LoadLevel(string loadFileName)
     {
+        GameObject[] allObjects = Object.FindObjectsOfType<GameObject>();
+
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.CompareTag("MainCamera") || obj.CompareTag("GameController"))
+                continue;
+            Destroy(obj);
+        }
         string loadFilePath = Application.streamingAssetsPath + "/Levels/" + loadFileName;
 
         StreamReader sr = new StreamReader(loadFilePath);
@@ -188,10 +196,11 @@ public class LevelGenerator : MonoBehaviour
                     break;
                 case "Player1(Clone)":
                     tileObject = Instantiate(player1Prefab, StringToVector3(line[1]), Quaternion.identity);
-                    // Player.Create1(StringToVector3(line[1]));
+                    GameManager.Instance.players[0] = tileObject;
                     break;
                 case "Player2(Clone)":
                     tileObject = Instantiate(player2Prefab, StringToVector3(line[1]), Quaternion.identity);
+                    GameManager.Instance.players[1] = tileObject;
                     break;
                 case "SmartMonster(Clone)":
                     tileObject = Instantiate(smartMonsterPrefab, StringToVector3(line[1]), Quaternion.identity);
@@ -207,6 +216,7 @@ public class LevelGenerator : MonoBehaviour
 
             tileObjects.Add(tileObject);
         }
+        
 
         sr.Close();
     }

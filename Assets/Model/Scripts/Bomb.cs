@@ -7,6 +7,7 @@ public class Bomb : MonoBehaviour
 
     public GameObject wallPrefab;
     public GameObject boxPrefab;
+    public GameObject fakeboxPrefab;
 
     public LayerMask explosionLayerMask;
     public GameObject explosionPrefab;
@@ -118,7 +119,7 @@ public class Bomb : MonoBehaviour
                 GameObject expl = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
                 Destroy(expl, 1f);
             }
-            if (collider != null && collider.gameObject.CompareTag("fakeBox"))
+            if (collider != null && collider.gameObject.CompareTag(fakeboxPrefab.tag))
             {
                 GameObject fakeBoxObject = collider.gameObject;
                 Destroy(fakeBoxObject);
@@ -148,10 +149,14 @@ public class Bomb : MonoBehaviour
             }
             return;
         }
+        else
+        {
+            GameObject explosion = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
+            Destroy(explosion, 1f);
+            Explode(explosionPosition, direction, length - 1);
+        }
 
-        GameObject explosion = Instantiate(explosionPrefab, explosionPosition, Quaternion.identity);
-        Destroy(explosion, 1f);
-        Explode(explosionPosition, direction, length - 1);
+        
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

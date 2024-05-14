@@ -29,5 +29,6 @@ public class Score : MonoBehaviour
     {
         //Debug.Log("Scene loaded: " + scene.name);
         DontDestroyOnLoad(gameObject);
+        
     }
 }
