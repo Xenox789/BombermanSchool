@@ -40,13 +40,46 @@ public class Player : MonoBehaviour
     public void SetInviolable()
     {
         isInviolable = false;
+        spriteRendererUp.isExpires = false;
+        spriteRendererDown.isExpires = false;
+        spriteRendererLeft.isExpires = false;
+        spriteRendererRight.isExpires = false;
+        activeSpriteRenderer.isExpires = false;
     }
+
+
+    public void TimerExpires()
+    {
+        spriteRendererUp.isInviolable = false;
+        spriteRendererDown.isInviolable = false;
+        spriteRendererLeft.isInviolable = false;
+        spriteRendererRight.isInviolable = false;
+        activeSpriteRenderer.isInviolable = false;
+        spriteRendererUp.isGhost = false;
+        spriteRendererDown.isGhost = false;
+        spriteRendererLeft.isGhost = false;
+        spriteRendererRight.isGhost = false;
+        activeSpriteRenderer.isGhost = false;
+        spriteRendererUp.isExpires = true;
+        spriteRendererDown.isExpires = true;
+        spriteRendererLeft.isExpires = true;
+        spriteRendererRight.isExpires = true;
+        activeSpriteRenderer.isExpires = true;
+
+    }
+
     public void Inviolable()
     {
         if (!isInviolable)
         {
             isInviolable = true;
-            Invoke(nameof(SetInviolable),3f);
+            spriteRendererUp.isInviolable = true;
+            spriteRendererDown.isInviolable = true;
+            spriteRendererLeft.isInviolable = true;
+            spriteRendererRight.isInviolable = true;
+            activeSpriteRenderer.isInviolable = true;
+            Invoke(nameof(TimerExpires), 4f);
+            Invoke(nameof(SetInviolable),5f);
         }
     }
 
@@ -200,8 +233,10 @@ public class Player : MonoBehaviour
 
     private IEnumerator DeactivateDecreaseSpeed(float _movespeed, float delay)
     {
+        
         yield return new WaitForSeconds(delay);
         moveSpeed = _movespeed;
+        
     }
 
     public void ActivateFlyingPowerUp()
@@ -209,7 +244,13 @@ public class Player : MonoBehaviour
         
         isFlying = true;
         GetComponent<Collider2D>().isTrigger = true;
-        StartCoroutine(DeactivateFlyingPowerUpAfterDelay(10f));
+        spriteRendererUp.isGhost = true;
+        spriteRendererDown.isGhost = true;
+        spriteRendererLeft.isGhost = true;
+        spriteRendererRight.isGhost = true;
+        activeSpriteRenderer.isGhost = true;
+        Invoke(nameof(TimerExpires), 3.5f);
+        StartCoroutine(DeactivateFlyingPowerUpAfterDelay(5f));
     }
 
     
@@ -218,6 +259,11 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(delay);
         
         isFlying = false;
+        spriteRendererUp.isExpires = false;
+        spriteRendererDown.isExpires = false;
+        spriteRendererLeft.isExpires = false;
+        spriteRendererRight.isExpires = false;
+        activeSpriteRenderer.isExpires = false;
         GetComponent<Collider2D>().isTrigger = false;
         if(isOnWallOrBox)
         {
