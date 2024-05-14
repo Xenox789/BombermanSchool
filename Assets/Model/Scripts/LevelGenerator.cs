@@ -162,6 +162,7 @@ public class LevelGenerator : MonoBehaviour
                 continue;
             Destroy(obj);
         }
+        tileObjects = new List<GameObject>();
         string loadFilePath = Application.streamingAssetsPath + "/Levels/" + loadFileName;
 
         StreamReader sr = new StreamReader(loadFilePath);
@@ -216,7 +217,6 @@ public class LevelGenerator : MonoBehaviour
 
             tileObjects.Add(tileObject);
         }
-        
 
         sr.Close();
     }
