@@ -47,7 +47,7 @@ public class Extras : MonoBehaviour
                 break;
         }
 
-        Destroy(gameObject);
+        DestroyImmediate(gameObject);
     }
     
     private void OnTriggerEnter2D(Collider2D other)

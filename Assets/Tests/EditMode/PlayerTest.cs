@@ -51,6 +51,16 @@ public class PlayerTest
 
     }
 
+    [Test]
+    public void TestIsPositionWithinBounds()
+    {
+        Vector2 position = new Vector2(1f,2f);
+        bool IsWithin = playerScript.IsPositionWithinBounds(position);
+        Assert.IsTrue(IsWithin);
+    }
+
+    
+
 
 
 

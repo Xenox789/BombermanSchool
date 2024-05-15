@@ -6,7 +6,7 @@ public class SmartMonster : MonoBehaviour
 {
     public float speed = 1.0f;
     private Rigidbody2D rb;
-    private Vector2 movementDirection;
+    public Vector2 movementDirection;
     public List<Vector2> avDirections = new List<Vector2>();
     private LayerMask obstacleLayer;
 
@@ -14,7 +14,7 @@ public class SmartMonster : MonoBehaviour
     public MovementSpriteRenderer spriteRendererDown;
     public MovementSpriteRenderer spriteRendererLeft;
     public MovementSpriteRenderer spriteRendererRight;
-    private MovementSpriteRenderer activeSpriteRenderer;
+    public MovementSpriteRenderer activeSpriteRenderer;
 
     public Vector2 player1Coords;
     public Vector2 player2Coords;
@@ -64,7 +64,7 @@ public class SmartMonster : MonoBehaviour
         
     }
 
-    private void CalcBestDirection()
+    public void CalcBestDirection()
     {
         UpdatePlayerCoords();
         AvailableDirections();
@@ -107,7 +107,7 @@ public class SmartMonster : MonoBehaviour
         }
     }
 
-    private void ChangeDirections()
+    public void ChangeDirections()
     {
         CalcBestDirection();
         int choice = Random.Range(0, avDirections.Count);
