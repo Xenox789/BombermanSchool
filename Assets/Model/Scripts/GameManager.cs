@@ -60,8 +60,8 @@ public class GameManager : MonoBehaviour
     public void NewRound()
     {
         PlayerWins();
-        
-        FindObjectOfType<LevelGenerator>().GenerateLevel();
+
+        FindObjectOfType<LevelGenerator>().LoadLevel(loadFileName);
         
     }
     public void PlayerWins()

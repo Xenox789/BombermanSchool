@@ -154,11 +154,19 @@ public class LevelGenerator : MonoBehaviour
 
     public void LoadLevel(string loadFileName)
     {
+        GameObject[] allObjects = Object.FindObjectsOfType<GameObject>();
+
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.CompareTag("MainCamera") || obj.CompareTag("GameController"))
+                continue;
+            Destroy(obj);
+        }
+        tileObjects = new List<GameObject>();
+
         string loadFilePath = Application.streamingAssetsPath + "/Levels/" + loadFileName;
 
         StreamReader sr = new StreamReader(loadFilePath);
-
-        tileObjects = new List<GameObject>();
 
         while (!sr.EndOfStream)
         {
