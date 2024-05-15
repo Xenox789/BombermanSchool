@@ -25,7 +25,7 @@ public class FakeBoxCrontroller : MonoBehaviour
         
 
     }
-    private void PlaceFakeBox(){
+    public void PlaceFakeBox(){
         Vector2 position = transform.position;
         position.x = Mathf.Round(position.x);
         position.y = Mathf.Round(position.y);

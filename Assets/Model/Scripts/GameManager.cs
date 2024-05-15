@@ -101,9 +101,9 @@ public class GameManager : MonoBehaviour
     void CheckGameEnd()
     {
         
-        if(playerScores[0] == 3)
+        if(playerScores[0] == totalRounds)
             MessageBox(1);
-        else if(playerScores[1] == 3)
+        else if(playerScores[1] == totalRounds)
             MessageBox(2);
         CheckAlive = false;
                 
