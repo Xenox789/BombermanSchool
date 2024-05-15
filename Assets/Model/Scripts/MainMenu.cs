@@ -28,4 +28,14 @@ public class MainMenu : MonoBehaviour
     {
         FindObjectOfType<LevelGenerator>().SaveLevel(GameManager.Instance.saveFileName);
     }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
 }
