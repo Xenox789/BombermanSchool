@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|d:\\dani\\elte\\2023-24-2\\szofttech\\unityproject\\mapgeneration\\assets\\model\\scripts\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|d:\\dani\\elte\\2023-24-2\\szofttech\\unityproject\\mapgeneration\\assets\\model\\scripts\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|d:\\dani\\elte\\2023-24-2\\szofttech\\unityproject\\mapgeneration\\assets\\model\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +22,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LevelGenerator.cs",
+              "DocumentMoniker": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\LevelGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Model\\Scripts\\LevelGenerator.cs",
+              "ToolTip": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\LevelGenerator.cs",
+              "RelativeToolTip": "Assets\\Model\\Scripts\\LevelGenerator.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAiwIUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T01:26:01.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Model\\Scripts\\MainMenu.cs",
+              "ToolTip": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Model\\Scripts\\MainMenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T00:58:10.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Options.cs",
+              "DocumentMoniker": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\Options.cs",
+              "RelativeDocumentMoniker": "Assets\\Model\\Scripts\\Options.cs",
+              "ToolTip": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\Options.cs",
+              "RelativeToolTip": "Assets\\Model\\Scripts\\Options.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAADAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T00:57:36.797Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"

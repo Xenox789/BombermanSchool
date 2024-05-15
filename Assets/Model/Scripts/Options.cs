@@ -18,7 +18,8 @@ public class Options : MonoBehaviour
 
         foreach (string file in files)
         {
-            dropdown.options.Add(new TMP_Dropdown.OptionData(Path.GetFileName(file)));
+            if (Path.GetExtension(file) == ".bml")
+                dropdown.options.Add(new TMP_Dropdown.OptionData(Path.GetFileName(file)));
         }
 
         dropdown.RefreshShownValue();
