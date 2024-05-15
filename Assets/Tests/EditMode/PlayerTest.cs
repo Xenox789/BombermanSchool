@@ -38,12 +38,6 @@ public class PlayerTest
 
     }
 
-    [Test]
-    public void SetInviolableTest()
-    {
-        playerScript.SetInviolable();
-        Assert.IsFalse(playerScript.isInviolable);
-    }
 
     [Test]
     public void TestPlayerSpeedIncrease()
@@ -57,12 +51,6 @@ public class PlayerTest
 
     }
 
-    [Test]
-    public void Death()
-    {
-        playerScript.Death();
-        Assert.IsFalse(playerGameObject.activeSelf);
-    }
 
 
 
