@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class Options : MonoBehaviour
 {
-    [SerializeField] private TMP_Dropdown dropdown;
+    [SerializeField] private TMP_Dropdown levelDropdown;
+    [SerializeField] private TMP_Dropdown roundsDropdown;
 
     private void Awake()
     {
@@ -19,10 +20,10 @@ public class Options : MonoBehaviour
         foreach (string file in files)
         {
             if (Path.GetExtension(file) == ".bml")
-                dropdown.options.Add(new TMP_Dropdown.OptionData(Path.GetFileName(file)));
+                levelDropdown.options.Add(new TMP_Dropdown.OptionData(Path.GetFileName(file)));
         }
 
-        dropdown.RefreshShownValue();
+        levelDropdown.RefreshShownValue();
     }
 
     public void LoadGame()
@@ -50,15 +51,12 @@ public class Options : MonoBehaviour
 
     public void SetLevelToLoad()
     {
-        if (dropdown.value > 0)
-        {
-            GameManager.Instance.loadFileName = dropdown.options[dropdown.value].text;
-        }
+        if (levelDropdown.value > 0)
+            GameManager.Instance.loadFileName = levelDropdown.options[levelDropdown.value].text;
     }
 
-    public void LoadGameScene()
+    public void SetRounds()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        FindObjectOfType<Score>().gameObject.SetActive(true);
+        GameManager.Instance.totalRounds = int.Parse(roundsDropdown.options[roundsDropdown.value].text);
     }
 }

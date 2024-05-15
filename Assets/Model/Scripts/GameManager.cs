@@ -48,26 +48,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    /* void OnEnable()
-    {
-        // Subscribe to the scene loaded event
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnDisable()
-    {
-        // Unsubscribe from the scene loaded event
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        //Debug.Log("Scene loaded: " + scene.name);
-        // You can perform any necessary actions here
-        DontDestroyOnLoad(gameObject);
-    } */
-
-
     public void CheckWin()
     {
         
@@ -101,9 +81,9 @@ public class GameManager : MonoBehaviour
     void CheckGameEnd()
     {
         
-        if(playerScores[0] == 3)
+        if(playerScores[0] == totalRounds)
             MessageBox(1);
-        else if(playerScores[1] == 3)
+        else if(playerScores[1] == totalRounds)
             MessageBox(2);
         CheckAlive = false;
                 
