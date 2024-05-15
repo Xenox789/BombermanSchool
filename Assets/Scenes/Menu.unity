@@ -1172,7 +1172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &517610882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2277,8 +2277,8 @@ MonoBehaviour:
   players:
   - {fileID: 0}
   - {fileID: 0}
-  player1ScoreText: {fileID: 0}
-  player2ScoreText: {fileID: 0}
+  player1ScoreText: {fileID: 441517130}
+  player2ScoreText: {fileID: 1111565929}
   saveFileName: customlevel.bml
   loadFileName: customlevel.bml
 --- !u!4 &810729086
