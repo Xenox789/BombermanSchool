@@ -94,5 +94,16 @@ public class BombTests
         
         Assert.AreEqual(expectedExplosionRadius, actualExplosionRadius, "The explosion radius is not correct.");
     }
+    [Test]
+    public void Bomb_SetsTest()
+    {
+        GameObject bombObject = new GameObject();
+        Bomb bomb = bombObject.AddComponent<Bomb>();
+        bomb.explosionPrefab = new GameObject(); 
+        bomb.SetExplosionradius(6);
+        Assert.AreEqual(6,bomb.GetExplosionRadius());
+
+    }
+    
      
 }
