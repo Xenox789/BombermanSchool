@@ -15,7 +15,7 @@ public class FakeExtras : MonoBehaviour
 
     private void OnEnable()
     {
-        type = (ItemType)Random.Range(0, 3);
+        type = (ItemType)Random.Range(0, 4);
     }
     private void FakeExtraPickup(GameObject player)
     {

@@ -156,7 +156,7 @@ public class BombController : MonoBehaviour
     public void IsAnyBombRemaining()
     {
         if (bombsRemaining == 0) _IsAnyBombRemaining = true;
-        else _IsAnyBombRemaining = false;
+        _IsAnyBombRemaining = false;
     }
 
 
