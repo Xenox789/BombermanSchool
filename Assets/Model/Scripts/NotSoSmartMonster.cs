@@ -53,6 +53,10 @@ public class NotSoSmartMonster : MonoBehaviour
         {
             ChangeDirections();
         }
+        else if(avDirections.Count >= 3)
+        {
+            ChangeDirections();
+        }
         MoveMonster();
 
     }

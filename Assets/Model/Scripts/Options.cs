@@ -30,6 +30,7 @@ public class Options : MonoBehaviour
 
     public void LoadGame()
     {
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
