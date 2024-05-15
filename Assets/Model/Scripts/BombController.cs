@@ -153,10 +153,10 @@ public class BombController : MonoBehaviour
         bombsRemaining++;
     }
 
-    private void IsAnyBombRemaining()
+    public void IsAnyBombRemaining()
     {
         if (bombsRemaining == 0) _IsAnyBombRemaining = true;
-        _IsAnyBombRemaining = false;
+        else _IsAnyBombRemaining = false;
     }
 
 
