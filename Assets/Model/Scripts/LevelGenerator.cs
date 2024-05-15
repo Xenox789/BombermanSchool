@@ -21,40 +21,12 @@ public class LevelGenerator : MonoBehaviour
     public int width = 15;
     public int height = 11;
 
-    // List to store the gameobjects (prefabs)
     [SerializeField] private List<GameObject> tileObjects;
-
-    // bml = bomberman level
-    // [SerializeField] private string saveFileName;
-    // [SerializeField] private string loadFileName;
 
     void Start()
     {
-        // DontDestroyOnLoad(gameObject);
-        // GenerateLevel();
         LoadLevel(GameManager.Instance.loadFileName);
-
-        // SaveLevel();
     }
-
-    /* void OnEnable()
-    {
-        // Subscribe to the scene loaded event
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnDisable()
-    {
-        // Unsubscribe from the scene loaded event
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        //Debug.Log("Scene loaded: " + scene.name);
-        // You can perform any necessary actions here
-        DontDestroyOnLoad(gameObject);
-    } */
 
     public void GenerateLevel()
     {
@@ -79,7 +51,6 @@ public class LevelGenerator : MonoBehaviour
                 {
                     Vector2 leftSpawnPosition = new Vector2(x, y);
                     tileObject = Instantiate(player2Prefab, leftSpawnPosition, Quaternion.identity);
-                    // tileObjects.Add(tileObject);
                     GameManager.Instance.players[1] = tileObject;
                 }
                 else if(x == 1 && y == 1)
@@ -102,29 +73,25 @@ public class LevelGenerator : MonoBehaviour
                 {
                     Vector2 rightSpawnPosition = new Vector2(x, y);
                     tileObject = Instantiate(player1Prefab, rightSpawnPosition, Quaternion.identity);
-                    // tileObjects.Add(tileObject);
                     GameManager.Instance.players[0] = tileObject;
                 }
-                // Falak a sz�l�n
+                // Falak a szélén
                 else if (x == 0 || y == 0 || x == width - 1 || y == height - 1)
                 {
                     tileObject = Instantiate(outerWallPrefab, new Vector2(x, y), Quaternion.identity);
-                    // tileObjects.Add(tileObject);
                 }
-                // Falak minden m�sodik mez?n bel�l
+                // Falak minden második mezőn belül
                 else if (x % 2 == 0 && y % 2 == 0)
                 {
                     tileObject = Instantiate(wallPrefab, new Vector2(x, y), Quaternion.identity);
-                    // tileObjects.Add(tileObject);
                 }
-                // Dobozok helyez�se a falak k�z�tti r�szeken
+                // Dobozok helyezése a falak közötti részeken
                 else
                 {
-                    // Doboz vagy üres mez? véletlenszer? elhelyezése
+                    // Doboz vagy üres mező véletlenszerű elhelyezése
                     if (Random.Range(0, 100) < 30) // 30% esély
                     {
                         tileObject = Instantiate(boxPrefab, new Vector2(x, y), Quaternion.identity);
-                        // tileObjects.Add(tileObject);
                     }
                 }
                 tileObjects.Add(tileObject);

@@ -17,10 +17,12 @@ public class Options : MonoBehaviour
 
         string[] files = Directory.GetFiles(directory);
 
+        levelDropdown.ClearOptions();
+
         foreach (string file in files)
         {
             if (Path.GetExtension(file) == ".bml")
-                levelDropdown.options.Add(new TMP_Dropdown.OptionData(Path.GetFileName(file)));
+                levelDropdown.options.Add(new TMP_Dropdown.OptionData(Path.GetFileNameWithoutExtension(file)));
         }
 
         levelDropdown.RefreshShownValue();
@@ -52,7 +54,7 @@ public class Options : MonoBehaviour
     public void SetLevelToLoad()
     {
         if (levelDropdown.value > 0)
-            GameManager.Instance.loadFileName = levelDropdown.options[levelDropdown.value].text;
+            GameManager.Instance.loadFileName = levelDropdown.options[levelDropdown.value].text + ".bml";
     }
 
     public void SetRounds()

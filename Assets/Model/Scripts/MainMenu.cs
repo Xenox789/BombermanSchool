@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public string saveFileName;
+
+    // MainMenu
     public void StartGame()
     {
         // SceneManager.LoadScene("SampleScene");
@@ -17,6 +20,7 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    // PauseMenu
     public void QuitToMain()
     {
         Destroy(FindObjectOfType<Score>().gameObject);
@@ -37,5 +41,12 @@ public class MainMenu : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1;
+    }
+
+    public void GetSaveFileName(string fileName)
+    {
+        saveFileName = fileName + ".bml";
+
+        GameManager.Instance.saveFileName = saveFileName;
     }
 }

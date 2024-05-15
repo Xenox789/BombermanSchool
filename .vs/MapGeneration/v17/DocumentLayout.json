@@ -3,7 +3,27 @@
   "WorkspaceRootPath": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|d:\\dani\\elte\\2023-24-2\\szofttech\\unityproject\\mapgeneration\\assets\\model\\scripts\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|d:\\dani\\elte\\2023-24-2\\szofttech\\unityproject\\mapgeneration\\assets\\model\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\assets\\model\\scripts\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\assets\\model\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\assets\\model\\scripts\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\assets\\model\\scripts\\fakeboxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\fakeboxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\assets\\model\\scripts\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,24 +31,8 @@
       "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\smartmonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\assets\\model\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\assets\\model\\scripts\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C93593A0-7643-2D8F-681C-FE12461E78D0}|Bomb.csproj|D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\assets\\tests\\tests\\bombtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C93593A0-7643-2D8F-681C-FE12461E78D0}|Bomb.csproj|solutionrelative:assets\\tests\\tests\\bombtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\assets\\model\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\assets\\model\\scripts\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32950CE0-E965-17A7-057D-0B38DA2C2FA3}|Scripts.csproj|solutionrelative:assets\\model\\scripts\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,40 +50,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "FakeBoxController.cs",
+              "DocumentMoniker": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\FakeBoxController.cs",
+              "RelativeDocumentMoniker": "Assets\\Model\\Scripts\\FakeBoxController.cs",
+              "ToolTip": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\FakeBoxController.cs",
+              "RelativeToolTip": "Assets\\Model\\Scripts\\FakeBoxController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T21:19:09.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "SmartMonster.cs",
               "DocumentMoniker": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\SmartMonster.cs",
               "RelativeDocumentMoniker": "Assets\\Model\\Scripts\\SmartMonster.cs",
               "ToolTip": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\SmartMonster.cs",
               "RelativeToolTip": "Assets\\Model\\Scripts\\SmartMonster.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAA2wD0AAABLAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAmwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T18:01:01.151Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "BombTest.cs",
               "DocumentMoniker": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Tests\\Tests\\BombTest.cs",
               "RelativeDocumentMoniker": "Assets\\Tests\\Tests\\BombTest.cs",
               "ToolTip": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Tests\\Tests\\BombTest.cs",
               "RelativeToolTip": "Assets\\Tests\\Tests\\BombTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T17:39:40.489Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Score.cs",
               "DocumentMoniker": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\Score.cs",
               "RelativeDocumentMoniker": "Assets\\Model\\Scripts\\Score.cs",
               "ToolTip": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\Score.cs",
               "RelativeToolTip": "Assets\\Model\\Scripts\\Score.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAmwBMAAAAAAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAA4wBMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T17:24:11.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T17:24:11.648Z"
             },
             {
               "$type": "Document",
@@ -89,45 +104,46 @@
               "RelativeDocumentMoniker": "Assets\\Model\\Scripts\\Options.cs",
               "ToolTip": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\Options.cs",
               "RelativeToolTip": "Assets\\Model\\Scripts\\Options.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAmwCEAAAALAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAcwB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-02T00:57:36.797Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Model\\Scripts\\GameManager.cs",
               "ToolTip": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Model\\Scripts\\GameManager.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAiwDcAAAAAAAAA",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAywFkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T17:23:13.145Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "LevelGenerator.cs",
               "DocumentMoniker": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\LevelGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Model\\Scripts\\LevelGenerator.cs",
               "ToolTip": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\LevelGenerator.cs",
               "RelativeToolTip": "Assets\\Model\\Scripts\\LevelGenerator.cs",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAiwIUAAAAAAAAA",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAiwGQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-02T01:26:01.189Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Model\\Scripts\\MainMenu.cs",
               "ToolTip": "D:\\Dani\\Elte\\2023-24-2\\Szofttech\\UnityProject\\MapGeneration\\Assets\\Model\\Scripts\\MainMenu.cs",
               "RelativeToolTip": "Assets\\Model\\Scripts\\MainMenu.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAIBBwAQAAAAAAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAiwB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T00:58:10.382Z"
+              "WhenOpened": "2024-05-02T00:58:10.382Z",
+              "EditorCaption": ""
             }
           ]
         }
