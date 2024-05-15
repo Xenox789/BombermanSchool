@@ -188,10 +188,11 @@ public class LevelGenerator : MonoBehaviour
                     break;
                 case "Player1(Clone)":
                     tileObject = Instantiate(player1Prefab, StringToVector3(line[1]), Quaternion.identity);
-                    // Player.Create1(StringToVector3(line[1]));
+                    GameManager.Instance.players[0] = tileObject;
                     break;
                 case "Player2(Clone)":
                     tileObject = Instantiate(player2Prefab, StringToVector3(line[1]), Quaternion.identity);
+                    GameManager.Instance.players[1] = tileObject;
                     break;
                 case "SmartMonster(Clone)":
                     tileObject = Instantiate(smartMonsterPrefab, StringToVector3(line[1]), Quaternion.identity);

@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void OnEnable()
+    /* void OnEnable()
     {
         // Subscribe to the scene loaded event
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         //Debug.Log("Scene loaded: " + scene.name);
         // You can perform any necessary actions here
         DontDestroyOnLoad(gameObject);
-    }
+    } */
 
 
     public void CheckWin()
@@ -124,7 +124,8 @@ public class GameManager : MonoBehaviour
     {
         
         SceneManager.LoadScene("Menu");
-        Destroy(gameObject); 
+        Destroy(gameObject);
+        Destroy(FindObjectOfType<Score>().gameObject);
     }
 
 

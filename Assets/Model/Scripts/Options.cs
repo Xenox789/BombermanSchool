@@ -55,4 +55,10 @@ public class Options : MonoBehaviour
             GameManager.Instance.loadFileName = dropdown.options[dropdown.value].text;
         }
     }
+
+    public void LoadGameScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        FindObjectOfType<Score>().gameObject.SetActive(true);
+    }
 }

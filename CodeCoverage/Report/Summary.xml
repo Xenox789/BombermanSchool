@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>2024. 05. 15. - 20:37:06</Generatedon>
+    <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
+    <Assemblies>3</Assemblies>
+    <Classes>21</Classes>
+    <Files>21</Files>
+    <Coveredlines>146</Coveredlines>
+    <Uncoveredlines>891</Uncoveredlines>
+    <Coverablelines>1037</Coverablelines>
+    <Totallines>2612</Totallines>
+    <Linecoverage>14</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+    <Coveredmethods>30</Coveredmethods>
+    <Totalmethods>176</Totalmethods>
+    <Methodcoverage>17</Methodcoverage>
+  </Summary>
+  <Coverage>
+    <Assembly name="Assembly-CSharp-Editor" classes="1" coverage="0" coveredlines="0" coverablelines="107" totallines="262" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="14" methodcoverage="0">
+      <Class name="BuildCommand" coverage="0" coveredlines="0" coverablelines="107" totallines="262" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="14" methodcoverage="0" />
+    </Assembly>
+    <Assembly name="Bomb" classes="2" coverage="100" coveredlines="76" coverablelines="76" totallines="166" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="10" totalmethods="10" methodcoverage="100">
+      <Class name="BombTests" coverage="100" coveredlines="50" coverablelines="50" totallines="98" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
+      <Class name="PlayerTest" coverage="100" coveredlines="26" coverablelines="26" totallines="68" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="6" methodcoverage="100" />
+    </Assembly>
+    <Assembly name="Scripts" classes="18" coverage="8.1" coveredlines="70" coverablelines="854" totallines="2184" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="20" totalmethods="152" methodcoverage="13.1">
+      <Class name="Bomb" coverage="51.2" coveredlines="41" coverablelines="80" totallines="181" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="12" totalmethods="13" methodcoverage="92.3" />
+      <Class name="BombController" coverage="0" coveredlines="0" coverablelines="89" totallines="202" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="24" methodcoverage="0" />
+      <Class name="Dropdown" coverage="0" coveredlines="0" coverablelines="6" totallines="32" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="Extras" coverage="0" coveredlines="0" coverablelines="19" totallines="61" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="FakeBox" coverage="0" coveredlines="0" coverablelines="18" totallines="57" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
+      <Class name="FakeBoxCrontroller" coverage="0" coveredlines="0" coverablelines="17" totallines="45" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="6" methodcoverage="0" />
+      <Class name="FakeExtras" coverage="0" coveredlines="0" coverablelines="15" totallines="51" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="FlyingMonsterScript" coverage="0" coveredlines="0" coverablelines="98" totallines="234" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="11" methodcoverage="0" />
+      <Class name="GameManager" coverage="10.6" coveredlines="5" coverablelines="47" totallines="131" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="12" methodcoverage="16.6" />
+      <Class name="LevelGenerator" coverage="0" coveredlines="0" coverablelines="82" totallines="229" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="6" methodcoverage="0" />
+      <Class name="MainMenu" coverage="0" coveredlines="0" coverablelines="11" totallines="31" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="MonsterAI" coverage="0" coveredlines="0" coverablelines="60" totallines="141" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="9" methodcoverage="0" />
+      <Class name="MovementSpriteRenderer" coverage="0" coveredlines="0" coverablelines="19" totallines="58" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="6" methodcoverage="0" />
+      <Class name="NotSoSmartMonster" coverage="0" coveredlines="0" coverablelines="85" totallines="199" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="11" methodcoverage="0" />
+      <Class name="Options" coverage="0" coveredlines="0" coverablelines="24" totallines="68" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="7" methodcoverage="0" />
+      <Class name="Player" coverage="26" coveredlines="24" coverablelines="92" totallines="232" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="19" methodcoverage="31.5" />
+      <Class name="Score" coverage="0" coveredlines="0" coverablelines="3" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="SmartMonster" coverage="0" coveredlines="0" coverablelines="89" totallines="196" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="11" methodcoverage="0" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>

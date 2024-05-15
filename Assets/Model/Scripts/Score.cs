@@ -7,15 +7,18 @@ public class Score : MonoBehaviour
 {
     /* void Start()
     {
+        // SceneManager.sceneLoaded += OnSceneLoaded;
         DontDestroyOnLoad(gameObject);
     } */
 
     void Awake()
     {
+        gameObject.SetActive(false);
+        // SceneManager.sceneLoaded += OnSceneLoaded;
         DontDestroyOnLoad(gameObject);
     }
 
-    void OnEnable()
+    /* void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -29,5 +32,5 @@ public class Score : MonoBehaviour
     {
         //Debug.Log("Scene loaded: " + scene.name);
         DontDestroyOnLoad(gameObject);
-    }
+    } */
 }

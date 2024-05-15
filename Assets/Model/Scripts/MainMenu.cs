@@ -19,6 +19,8 @@ public class MainMenu : MonoBehaviour
 
     public void QuitToMain()
     {
+        Destroy(FindObjectOfType<Score>().gameObject);
+        Destroy(FindObjectOfType<GameManager>().gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 

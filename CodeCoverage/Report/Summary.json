@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "generatedon": "2024-05-15T18:37:06Z",
+    "parser": "MultiReportParser (2x OpenCoverParser)",
+    "assemblies": 3,
+    "classes": 21,
+    "files": 21,
+    "coveredlines": 146,
+    "uncoveredlines": 891,
+    "coverablelines": 1037,
+    "totallines": 2612,
+    "linecoverage": 14,
+    "coveredbranches": 0,
+    "totalbranches": 0,
+    "coveredmethods": 30,
+    "totalmethods": 176,
+    "methodcoverage": 17
+ },
+  "coverage": {
+    "assemblies": [
+      { "name": "Assembly-CSharp-Editor", "classes": 1, "coverage": 0, "coveredlines": 0, "coverablelines": 107, "totallines": 262, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 14, "classesinassembly": [
+        { "name": "BuildCommand", "coverage": 0, "coveredlines": 0, "coverablelines": 107, "totallines": 262, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 14 } ] },
+      { "name": "Bomb", "classes": 2, "coverage": 100, "coveredlines": 76, "coverablelines": 76, "totallines": 166, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 10, "totalmethods": 10, "classesinassembly": [
+        { "name": "BombTests", "coverage": 100, "coveredlines": 50, "coverablelines": 50, "totallines": 98, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 4, "totalmethods": 4 },
+        { "name": "PlayerTest", "coverage": 100, "coveredlines": 26, "coverablelines": 26, "totallines": 68, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 6, "totalmethods": 6 } ] },
+      { "name": "Scripts", "classes": 18, "coverage": 8.1, "coveredlines": 70, "coverablelines": 854, "totallines": 2184, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 13.1, "coveredmethods": 20, "totalmethods": 152, "classesinassembly": [
+        { "name": "Bomb", "coverage": 51.2, "coveredlines": 41, "coverablelines": 80, "totallines": 181, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 92.3, "coveredmethods": 12, "totalmethods": 13 },
+        { "name": "BombController", "coverage": 0, "coveredlines": 0, "coverablelines": 89, "totallines": 202, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 24 },
+        { "name": "Dropdown", "coverage": 0, "coveredlines": 0, "coverablelines": 6, "totallines": 32, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 2 },
+        { "name": "Extras", "coverage": 0, "coveredlines": 0, "coverablelines": 19, "totallines": 61, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 2 },
+        { "name": "FakeBox", "coverage": 0, "coveredlines": 0, "coverablelines": 18, "totallines": 57, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 5 },
+        { "name": "FakeBoxCrontroller", "coverage": 0, "coveredlines": 0, "coverablelines": 17, "totallines": 45, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 6 },
+        { "name": "FakeExtras", "coverage": 0, "coveredlines": 0, "coverablelines": 15, "totallines": 51, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
+        { "name": "FlyingMonsterScript", "coverage": 0, "coveredlines": 0, "coverablelines": 98, "totallines": 234, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 11 },
+        { "name": "GameManager", "coverage": 10.6, "coveredlines": 5, "coverablelines": 47, "totallines": 131, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 16.6, "coveredmethods": 2, "totalmethods": 12 },
+        { "name": "LevelGenerator", "coverage": 0, "coveredlines": 0, "coverablelines": 82, "totallines": 229, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 6 },
+        { "name": "MainMenu", "coverage": 0, "coveredlines": 0, "coverablelines": 11, "totallines": 31, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
+        { "name": "MonsterAI", "coverage": 0, "coveredlines": 0, "coverablelines": 60, "totallines": 141, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 9 },
+        { "name": "MovementSpriteRenderer", "coverage": 0, "coveredlines": 0, "coverablelines": 19, "totallines": 58, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 6 },
+        { "name": "NotSoSmartMonster", "coverage": 0, "coveredlines": 0, "coverablelines": 85, "totallines": 199, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 11 },
+        { "name": "Options", "coverage": 0, "coveredlines": 0, "coverablelines": 24, "totallines": 68, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 7 },
+        { "name": "Player", "coverage": 26, "coveredlines": 24, "coverablelines": 92, "totallines": 232, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 31.5, "coveredmethods": 6, "totalmethods": 19 },
+        { "name": "Score", "coverage": 0, "coveredlines": 0, "coverablelines": 3, "totallines": 36, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 1 },
+        { "name": "SmartMonster", "coverage": 0, "coveredlines": 0, "coverablelines": 89, "totallines": 196, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 11 } ] } ]
+  }
+}
