@@ -169,7 +169,7 @@ public class FlyingMonsterScript : MonoBehaviour
         avDirections = result;
     }
 
-    float CalcNextBlock(Vector2 direction)
+    public float CalcNextBlock(Vector2 direction)
     {
         float x = Mathf.Round(transform.position.x) + direction.x;
         float y = Mathf.Round(transform.position.y) + direction.y;

@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI player2ScoreText;
 
 
-    private bool CheckAlive;
+    public bool CheckAlive;
 
     public string saveFileName;
     public string loadFileName;
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
         CheckGameEnd();
     }
 
-    void CheckGameEnd()
+    public void CheckGameEnd()
     {
         
         if(playerScores[0] == totalRounds)
