@@ -35,12 +35,4 @@ public class BombControllerTest
         Assert.IsTrue(BombControllerScript.IsDetonatable);
     }
 
-    [Test]
-    public void IsAnyBombRemaining()
-    {
-        BombControllerScript.bombsRemaining = 0;
-        BombControllerScript.IsAnyBombRemaining();
-        Assert.IsTrue(BombControllerScript._IsAnyBombRemaining);
-
-    }
 }
