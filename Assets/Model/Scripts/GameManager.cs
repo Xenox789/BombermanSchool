@@ -62,9 +62,6 @@ public class GameManager : MonoBehaviour
         PlayerWins();
 
         FindObjectOfType<LevelGenerator>().LoadLevel(loadFileName);
-        
-        FindObjectOfType<LevelGenerator>().LoadLevel(loadFileName);
-        
     }
     public void PlayerWins()
     {
